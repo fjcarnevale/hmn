@@ -1,87 +1,160 @@
-H4 {
-	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 20px; PADDING-TOP: 0px
+h4 {
+	font-size: 20px;
+	padding: 0px;
 }
-BODY {
-	BACKGROUND-COLOR: #FFF
+body {
+	background-color: #fff;
 }
+
 .entire_page {
-	TEXT-ALIGN: justify; BACKGROUND-COLOR: #eee; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 20px
+	
+	padding-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #eee;
+	text-align: justify;
 }
+
 #survey {
-	BACKGROUND-COLOR: #eee; WIDTH: 100%; FLOAT: left
+	background-color: #eee;
+	float: left;
+	width: 100%;
 }
+
 #comment {
-	WIDTH: 100%
+	width: 100%;
 }
-A {
-	COLOR: blue; CURSOR: pointer; TEXT-DECORATION: underline
+
+a {
+	color: blue;
+	cursor: pointer;
+	text-decoration: underline;
 }
+
 #activities_left {
-	BACKGROUND-COLOR: #eee; WIDTH: 50%; FLOAT: left; COLOR: red
+	color: red;
+	float: left;
+	width: 50%;
+	background-color: #eee;
 }
+
 #activities_right {
-	BACKGROUND-COLOR: #eee; WIDTH: 50%; FLOAT: right; COLOR: blue
+	float: right;
+	color: blue;
+	width: 50%;
+	background-color: #eee;
 }
-#test_page_table TD {
-	WIDTH: 50%; VERTICAL-ALIGN: top
+
+#test_page_table td{
+	width: 50%;
+	vertical-align: top;
+	
 }
+
 .history_span {
-	COLOR: #339933; CURSOR: default
+	color: #339933;
+	cursor: default;
 }
+
 .graph_table {
-	WIDTH: 10px
+	width: 10px;
 }
-.graph_table TD {
-	TEXT-ALIGN: center
+
+.graph_table td {
+	text-align: center;
+
 }
-.graph_table .left {
-	WIDTH: 10px
+.graph_table .left{
+	width: 10px;
+	
 }
+
 .footer {
-	TEXT-ALIGN: center; COLOR: #505050;
+	color: #505050;
+	text-align: center;
 }
+
 .centered {
-	TEXT-ALIGN: center
+	text-align: center;
 }
-LABEL:hover {
-	BACKGROUND-COLOR: black; COLOR: skyblue
+
+label:hover{
+	color: skyblue;
+	background-color: black;
 }
-INPUT[type=radio] {
-	MARGIN-LEFT: 6px; MARGIN-RIGHT: 0px
+input[type=radio] {
+	margin-right: 0px;
+	margin-left: 6px;
 }
-INPUT[type=checkbox] {
-	MARGIN-RIGHT: 0px
+
+input[type=checkbox] {
+	margin-right: 0px;
 }
+
 .results_not_started {
-	FONT-STYLE: italic
+	font-style: italic;
 }
+
 .progress {
-	FONT-WEIGHT: bold
+	font-weight: bold;
 }
+
 .detailed_info {
-	COLOR: red; MARGIN-LEFT: 10px
+	color: red;
+	margin-left: 10px;
 }
-A.selected {
-	BACKGROUND-COLOR: yellow; COLOR: white
+
+
+
+a.selected {
+  background-color:yellow;
+  color:white;
+  /*z-index:100;*/
 }
+
 .messagepop {
-	POSITION: absolute; BACKGROUND-COLOR: #cccccc; MAX-WIDTH: 40%
+	background-color:#CCCCCC;
+  /*border:1px solid #999999;*/
+  /*cursor:default;*/
+  /*display:none;*/
+ /* margin-top: 15px;*/
+	position:absolute;
+	/*border: 1px solid black;*/
+ /* text-align:left;*/
+	max-width: 40%;
+ /* z-index: 0;*/
+  
+ /* padding: 25px 25px;*/
+ /* background-color: red;*/
 }
-.messagepop P {
-	
+
+.messagepop p, .messagepop.div {
+  /*border-bottom: 1px solid #EFEFEF;
+  margin: 8px 0;
+  padding-bottom: 8px;
+  z-index: 50;
+  background-color: blue;*/
 }
-.div {
-	
-}
+
 #graph_div {
-	WIDTH: 400px; HEIGHT: 200px
+	/*z-index: 100;*/
+	width: 400px;
+	height: 200px;
 }
+
 .inline {
-	DISPLAY: inline; CURSOR: default
+	display: inline;
+	cursor: default;
 }
+
 .no_data {
-	TEXT-ALIGN: center; COLOR: red
+	text-align: center;
+	font-style: bold;
+	color: red;
 }
-.survey_table TD {
-	PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px
+
+.survey_table td {
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
