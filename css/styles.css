@@ -1,0 +1,87 @@
+H4 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 20px; PADDING-TOP: 0px
+}
+BODY {
+	BACKGROUND-COLOR: #FFF
+}
+.entire_page {
+	TEXT-ALIGN: justify; BACKGROUND-COLOR: #eee; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 20px
+}
+#survey {
+	BACKGROUND-COLOR: #eee; WIDTH: 100%; FLOAT: left
+}
+#comment {
+	WIDTH: 100%
+}
+A {
+	COLOR: blue; CURSOR: pointer; TEXT-DECORATION: underline
+}
+#activities_left {
+	BACKGROUND-COLOR: #eee; WIDTH: 50%; FLOAT: left; COLOR: red
+}
+#activities_right {
+	BACKGROUND-COLOR: #eee; WIDTH: 50%; FLOAT: right; COLOR: blue
+}
+#test_page_table TD {
+	WIDTH: 50%; VERTICAL-ALIGN: top
+}
+.history_span {
+	COLOR: #339933; CURSOR: default
+}
+.graph_table {
+	WIDTH: 10px
+}
+.graph_table TD {
+	TEXT-ALIGN: center
+}
+.graph_table .left {
+	WIDTH: 10px
+}
+.footer {
+	TEXT-ALIGN: center; COLOR: #505050;
+}
+.centered {
+	TEXT-ALIGN: center
+}
+LABEL:hover {
+	BACKGROUND-COLOR: black; COLOR: skyblue
+}
+INPUT[type=radio] {
+	MARGIN-LEFT: 6px; MARGIN-RIGHT: 0px
+}
+INPUT[type=checkbox] {
+	MARGIN-RIGHT: 0px
+}
+.results_not_started {
+	FONT-STYLE: italic
+}
+.progress {
+	FONT-WEIGHT: bold
+}
+.detailed_info {
+	COLOR: red; MARGIN-LEFT: 10px
+}
+A.selected {
+	BACKGROUND-COLOR: yellow; COLOR: white
+}
+.messagepop {
+	POSITION: absolute; BACKGROUND-COLOR: #cccccc; MAX-WIDTH: 40%
+}
+.messagepop P {
+	
+}
+.div {
+	
+}
+#graph_div {
+	WIDTH: 400px; HEIGHT: 200px
+}
+.inline {
+	DISPLAY: inline; CURSOR: default
+}
+.no_data {
+	TEXT-ALIGN: center; COLOR: red
+}
+.survey_table TD {
+	PADDING-LEFT: 10px; PADDING-RIGHT: 10px; PADDING-TOP: 10px
+}

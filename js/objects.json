@@ -1,0 +1,351 @@
+{
+    "0": {
+        "link": "object-1KB.txt",
+        "size": "1024"
+    },
+	"1": {
+        "link": "object-2KB.txt",
+        "size": "2048"
+    },
+	"2": {
+        "link": "object-4KB.txt",
+        "size": "4096"
+    },
+	"3": {
+        "link": "object-8KB.txt",
+        "size": "8192"
+    },
+	"4": {
+        "link": "object-16KB.txt",
+        "size": "16384"
+    },
+	"5": {
+        "link": "object-32KB.txt",
+        "size": "32768"
+    },
+	"6": {
+        "link": "object-64KB.txt",
+        "size": "65536"
+    },
+	"7": {
+        "link": "object-128KB.txt",
+        "size": "131072"
+    },
+	"8": {
+        "link": "object-256KB.txt",
+        "size": "262144"
+    },
+	"9": {
+        "link": "object-512KB.txt",
+        "size": "524288"
+    },
+	"10": {
+        "link": "object-1MB.txt",
+        "size": "1048576"
+    },
+	"11": {
+        "link": "object-2MB.txt",
+        "size": "2097152"
+    },
+	"12": {
+        "link": "object-4MB.txt",
+        "size": "4194304"
+    },
+	"13": {
+        "link": "object-10MB.txt",
+        "size": "10485760"
+    },
+	"cnn_container": {
+        "link": "http://i.cdn.turner.com/si/.element/img/4.1/sect/basketball/ncaa/mens-tournament-2011/bracket_links_4.png",
+        "size": "10"
+    },
+	"cnn_avg_object": {
+        "link": "http://i.cdn.turner.com/cnn/.element/img/3.0/global/shade/sprite_shades.gif",
+        "size": "96"
+    },
+	"la_container": {
+        "link": "http://www.latimes.com/media/alternatethumbnails/storylink/2011-04/60638908-04095455.jpg",
+        "size": "26"
+    },
+	"la_avg_object": {
+        "link": "http://www.latimes.com/images/logo.png",
+        "size": "203"
+    },
+	"msn_container": {
+        "link": "http://nbcsportsmedia2.msnbc.com/j/MSNBC/Components/Photo/_new/spt-110403-matt-howardtease.nbcsports-grid-8x2.jpg",
+        "size": "6"
+    },
+	"msn_avg_object": {
+        "link": "http://nbcsportsmedia3.msnbc.com/j/NBCSports/Components/Video/_NEW/s_nbc_nhl_nyrphimikeshattrick_110403_16x9.nbcsports-grid-2x2.jpg",
+        "size": "161"
+    },
+	"ny_container": {
+        "link": "http://i1.nyt.com/images/video/bc_nytimesLogo.gif",
+        "size": "5"
+    },
+	"ny_avg_object": {
+        "link": "http://graphics8.nytimes.com/images/2010/04/30/health/consult_45/consult_45-custom1.jpg",
+        "size": "96"
+    },
+	"wp_container": {
+        "link": "http://www.washingtonpost.com/rf/image_296w/2010-2019/WashingtonPost/2011/03/21/Web-Resampled/2011-03-20/STsxsw17_1300555440--296x208.jpg",
+        "size": "16"
+    },
+	"wp_avg_object": {
+        "link": "http://www.washingtonpost.com/rf/image_145x100/WashingtonPost/Production/Digital/Pages-Web/homepage/_module-content/obama-oil-drilling-141x96.jpg",
+        "size": "145"
+    },
+	"abc_container": {
+        "link": "http://a.abcnews.com/assets/images/shows/blotter/blotter_faces_main.gif",
+        "size": "14"
+    },
+	"abc_avg_object": {
+        "link": "http://a.abcnews.com/images/Health/gty_seasonal_allergies_dr_110520_wl.jpg",
+        "size": "125"
+    },
+	"ru_container": {
+        "link": "http://static.reuters.com/resources/media/global/assets/images/20110530/fullfocusmay301023.jpg",
+        "size": "14"
+    },
+	"ru_avg_object": {
+        "link": "http://www.reuters.com/resources_v2/images/sprite-core.gif",
+        "size": "125"
+    },
+	"bbc_container": {
+        "link": "http://news.bbcimg.co.uk/view/1_4_14/cream/hi/shared/img/services-rss.gif",
+        "size": "14"
+    },
+	"bbc_avg_object": {
+        "link": "http://news.bbcimg.co.uk/view/1_4_19/cream/hi/news/img/livestats-sprite-ko.png",
+        "size": "125"
+    },
+	"ut_container": {
+        "link": "http://i.usatoday.net/communitymanager/_photos/technology-live/2011/05/31/NBA%20Game%20Timex-inset-community.jpg",
+        "size": "14"
+    },
+	"ut_avg_object": {
+        "link": "http://i.usatoday.net//news/gallery/2011/n110530_day/05-30-day/thumbnail-n110530-hf.jpg",
+        "size": "125"
+    },
+	"hp_container": {
+        "link": "http://i.huffpost.com/gen/283213/thumbs/s-GRILL-FOODS-large.jpg",
+        "size": "6"
+    },
+	"hp_avg_object": {
+        "link": "http://i.huffpost.com/gen/246677/HIPPOMOTHER.jpg",
+        "size": "85"
+    },
+	"fb_container": {
+        "link":  "http://photos-a.ak.fbcdn.net/hphotos-ak-snc6/183321_10150099425317413_701797412_6790711_6220276_s.jpg",
+        "size": "1"
+    },
+	"fb_avg_object": {
+        "link": "http://profile.ak.fbcdn.net/hprofile-ak-snc4/71156_20669912712_7052644_q.jpg",
+        "size": "17"
+    },
+	"tw_container": {
+        "link": "http://a3.twimg.com/profile_images/1370053287/Screen_shot_2011-05-26_at_2.47.58_PM_normal.png",
+        "size": "1"
+    },
+	"tw_avg_object": {
+        "link": "http://a2.twimg.com/profile_background_images/216847646/Castelul_Corvinilor_din_Hunedoara.jpg",
+        "size": "13"
+    },
+	"ms_container": {
+        "link": "http://cms.myspacecdn.com/cms/Developer%20Platform/Futura/Hub%20Page/Carousel%20Feed/HeroUnit/dog_wars.jpg",
+        "size": "2"
+    },
+	"ms_avg_object": {
+        "link": "http://cms.myspacecdn.com/cms/x/11/27/070511-FriendsBenefits-124.jpg",
+        "size": "65"
+    },
+	"fr_container": {
+        "link": "http://d3outgkpos8q21.cloudfront.net/public/apps/wall_photos/567/thumb_1316407905.png",
+        "size": "12"
+    },
+	"fr_avg_object": {
+        "link": "http://d3lihw2jc2z1gc.cloudfront.net/ce9c05ee2c8bfdc40006e01dd68665d4d0bb33dd/images/app/views/layouts/application/background/header_tagline.png",
+        "size": "124"
+    },
+	"ld_container": {
+        "link": "http://media02.linkedin.com/mpr/mpr/shrink_60_60/p/3/000/03f/2c3/212593e.jpg",
+        "size": "2"
+    },
+	"ld_avg_object": {
+        "link": "http://media03.linkedin.com/media/p/3/000/02f/3f6/3fde0a6.png",
+        "size": "70"
+    },
+	"sb_container": {
+        "link": "http://www.smartbargains.com/img/promos/Slot2.jpg",
+        "size": "20"
+    },
+	"sb_avg_object": {
+        "link": "http://www.smartbargains.com/images/S/710374.jpg",
+        "size": "135"
+    },
+	"az_container": {
+        "link": "http://g-ecx.images-amazon.com/images/G/01/common/sprites/sprite-site-wide-2._V181113497_.png",
+        "size": "7"
+    },
+	"az_avg_object": {
+        "link": "http://g-ecx.images-amazon.com/images/G/01/common/sprites/sprite-accessories-2._V205433551_.png",
+        "size": "104"
+    },
+	"gt_container": {
+        "link": "http://www.giftag.com/media/art/home_signup_form.png",
+        "size": "7"
+    },
+	"gt_avg_object": {
+        "link": "http://www.giftag.com/media/art/ff_plugin_shot.png",
+        "size": "44"
+    },
+	"br": {
+        "link": "http://www.bizrate.com/",
+        "size": "0"
+    },
+	"br_container": {
+        "link": "http://file12.bizrate-images.com/s2static/us/br/5cae9c57/br2/images/warm/warm_corners_bottom.gif",
+        "size": "8"
+    },
+	"br_avg_object": {
+        "link": "http://file12.bizrate-images.com/s2static/us/br/5cae9c57/br3/images/header-opt.png",
+        "size": "33"
+    },
+	"eb_container": {
+        "link": "http://q.ebaystatic.com/aw/pics/motors2/images/imgHarleyDavidson.jpg",
+        "size": "2"
+    },
+	"eb_avg_object": {
+        "link": "http://thumbs1.ebaystatic.com/m/mqH9_AippWp4-LeeHnWYpLg/140.jpg",
+        "size": "21"
+    },	
+	"boston_viop_ping": {
+        "link": "http://mit.edu/img/transperantPNG.png",
+        "size": "625"
+    },
+	"ny_voip_ping": {
+        "link": "http://www.nyu.edu/common/images/headerGradient3.gif",
+        "size": "1"
+    },
+	"ph_voip_ping": {
+        "link": "http://www.philau.edu/admissions/images/space.gif",
+        "size": "575"
+    },
+	"dc_voip_ping": {
+        "link": "http://www.gwu.edu/robots.txt",
+        "size": "495"
+    },
+	"miami_voip_ping": {
+        "link": "http://www.barry.edu/imageslayout/list-li-bg.gif",
+        "size": "43"
+    },
+	"sd_voip_ping": {
+        "link": "http://www.ucsd.edu/common/_resources/current/css/images/search_top_right.gif",
+        "size": "251"
+    },
+	"sf_voip_ping": {
+        "link": "http://www.ccsf.edu/NEW/common/images/bg-footer.gif",
+        "size": "282"
+    },
+	"la_voip_ping": {
+        "link": "http://newsroom.ucla.edu/portal/ucla/images/v2/transp.gif",
+        "size": "841"
+    },
+	"portland_voip_ping": {
+        "link": "http://www.up.edu/images/applyGive_btn.png",
+        "size": "21"
+    },
+	"seattle_voip_ping": {
+        "link": "http://www.seattleu.edu/WorkArea/images/application/bubble/close.gif",
+        "size": "786"
+    },
+	"oxford_voip_ping": {
+        "link": "http://www.ox.ac.uk/display_images/horizontal_dash.gif",
+        "size": "474"
+    },
+	"madrid_voip_ping": {
+        "link": "http://www.uem.es/sites/corporativo/images/bg_breadcrumb.gif",
+        "size": "79"
+    },
+	"milan_voip_ping": {
+        "link": "http://www.unibocconi.it/wtmrep/hp/img/traspDot.gif",
+        "size": "494"
+    },
+	"moscow_voip_ping": {
+        "link": "http://wwwlib.phys.msu.ru/img/dot1.gif",
+        "size": "43"
+    },
+	"budapest_voip_ping": {
+        "link": "http://www.uniwest.hu/display_images/horizontal_dash_light.gif",
+        "size": "375"
+    },
+	"game_wow_us": {
+        "link": "http://mit.edu/img/transperantPNG.png"
+    },
+	"game_wow_europe": {
+        "link": "http://www.uem.es/sites/corporativo/images/bg_breadcrumb.gif"
+    },
+	"game_wow_austrailia": {
+        "link": "http://sydney.edu.au/images/console/arrow_right.gif"
+    },
+	"game_wow_china": {
+        "link": "http://en.scut.edu.cn/images/body_bg.gif"
+    },
+	"game_wow_taiwan": {
+        "link": "http://www.ntu.edu.tw/activities/festival2011/images/bg.gif"
+    },
+	"game_wow_korea": {
+        "link": "http://www.korea.edu/images_2008/menu_arrow.gif"
+    },
+	"cached_item": {
+        "link": "indicator_medium.gif"
+    },
+	"game_lol_us": {
+        "link": "http://newsroom.ucla.edu/portal/ucla/images/v2/transp.gif"
+    },
+	"game_lol_europe": {
+        "link": "http://www.uni-heidelberg.de/images/uni/zentral/all/icon_search.gif"
+    },
+	"game_lol_asia": {
+        "link": "http://www.nus.edu.sg/iw/resources/global/images/shim.gif"
+    },
+	"akami_ping": {
+        "link": "http://a1.g.akamaitech.net/6/6/6/6/www.yahoo.com/robots.txt"
+    },
+	"akami_download_0": {
+        "link": "http://a676.g.akamaitech.net/f/676/773/60m/images.delivery.net/cm50content/fedex/20090107_autocomm/images/myfedex3.jpg",
+		"size": "18585"
+	},
+	"akami_download_1": {
+        "link": "http://a1380.g.akamaitech.net/7/1380/175/03202000/f.chtah.com/i/2/95827765/19B_10_25_WP.gif",
+		"size": "74807"
+	},
+	"akami_download_2": {
+        "link": "http://a1380.g.akamaitech.net/7/1380/175/03202000/f.chtah.com/i/2/95827765/14DMA8_20_100_SL.gif",
+		"size": "163758"
+	},
+	"akami_download_3": {
+        "link": "http://a1452.g.akamaitech.net/f/1452/2731/24h/cacheB.xerox.com/images/usa/en/n/nr_Phaser6110MFP.jpg",
+		"size": "257771"
+	},
+	"akami_download_4": {
+        "link": "http://a1452.g.akamaitech.net/f/1452/2731/24h/cacheA.xerox.com/images/usa/en/n/nr_Xerox490_980_Continuous_Feed_Printing_System.jpg",
+		"size": "660865"
+	},
+	"akami_download_5": {
+        "link": "http://a676.g.akamaitech.net/f/676/773/60m/images.delivery.net/cm50content/090081018052f098/2008-07-21ps.jpg",
+		"size": "1599643"
+	},
+	"akami_download_6": {
+        "link": "http://a1452.g.akamaitech.net/f/1452/2731/24h/cacheA.xerox.com/images/usa/en/n/nr_XeroxTemporaryDocuments.jpg",
+		"size": "2880245"
+	},
+	"akami_download_7": {
+        "link": "http://a1452.g.akamaitech.net/f/1452/2731/24h/cacheA.xerox.com/images/usa/en/n/nr_Ursula_Burns_2010Feb_corpbio.jpg",
+		"size": "7695073"
+	},
+	"packet_pair": {
+        "link": "http://i.cdn.turner.com/cnn/.element/img/3.0/search/btn_search_hp_text.gif",
+        "size": "853"
+    }	
+}
