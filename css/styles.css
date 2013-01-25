@@ -79,8 +79,7 @@ a {
 }
 
 label:hover{
-	color: skyblue;
-	background-color: black;
+	color: blue;
 }
 input[type=radio] {
 	margin-right: 0px;
@@ -88,7 +87,7 @@ input[type=radio] {
 }
 
 input[type=checkbox] {
-	margin-right: 0px;
+	margin-right: 3px;
 }
 
 .results_not_started {
