@@ -6,6 +6,8 @@ use JSON;
 use strict;
 use warnings;
 
+my $to_email = "fjcarnevale\@gmail.com";
+my $local_file_path = "./files/";
 my $url = "http://users.wpi.edu/~fcarnevale/hmn/js/objects.json";
 
 my $json = get( $url );
@@ -20,9 +22,13 @@ my %failed = ();
 foreach my $key(keys %json_hash){
 	print "Testing: ",$key,"\t\t";
 	my $obj = get( $json_hash{$key}{'link'} );
+	# Try to get the object via HTTP request
 	if(!defined $obj){
-		print "Failure\n";
-		$failed{$key} = $json_hash{$key}{'link'};
+		# If that fails, test to see if its a local file
+		if(!open($obj,"<",$local_file_path.$json_hash{$key}{'link'})){
+			print "Failure\n";
+			$failed{$key} = $json_hash{$key}{'link'};
+		}
 	}else{
 		print "Success\n";
 	}
@@ -37,7 +43,7 @@ foreach my $key(keys %failed){
 
 print $message;
 
-sendEmail("fjcarnevale\@gmail.com","hmn\@cs.wpi.edu","HMN Link Failures",$message);
+sendEmail($to_email,"hmn\@cs.wpi.edu","HMN Link Failures",$message);
 
 sub sendEmail{
 
