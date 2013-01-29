@@ -15,6 +15,21 @@ die "Could not get \"$url\"\n" unless defined $json;
 my $hash_ref = decode_json($json);
 my %json_hash = %$hash_ref;
 
+my %failed = ();
+
+
 foreach my $key(keys %json_hash){
-	print $key,"\n";
+	print "Testing: ",$key,"\t\t";
+	my $obj = get( $json_hash{$key}{'link'} );
+	if(!defined $obj){
+		print "Failure\n";
+		$failed{$key} = $json_hash{$key}{'link'};
+	}else{
+		print "Success\n";
+	}
+}
+
+print "The following links failed\n";
+foreach my $key(keys %failed){
+	printf $key,"\n";
 }
