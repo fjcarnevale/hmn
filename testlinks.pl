@@ -20,15 +20,12 @@ my %failed = ();
 
 
 foreach my $key(keys %json_hash){
-	print "Testing: ",$key,"\t\t";
+	printf("Testing: %-32s",$key);
 	my $obj = get( $json_hash{$key}{'link'} );
 	# Try to get the object via HTTP request
-	if(!defined $obj){
-		# If that fails, test to see if its a local file
-		if(!open($obj,"<",$local_file_path.$json_hash{$key}{'link'})){
+	if(!defined $obj && !open($obj,"<",$local_file_path.$json_hash{$key}{'link'})){
 			print "Failure\n";
 			$failed{$key} = $json_hash{$key}{'link'};
-		}
 	}else{
 		print "Success\n";
 	}
