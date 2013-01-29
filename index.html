@@ -85,6 +85,14 @@ document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 			);					
 		});	
 		   
+function select_all_items(item_prefix){
+	var news_items = document.getElementsByName(item_prefix+'_item');
+	var selected = document.getElementsByName(item_prefix+'_title')[0].checked;
+	for(var i=0;i<news_items.length;i++){
+		news_items[i].checked = selected;
+	}
+
+}
 </script>
 <style type="text/css">
 		.popBoxClass {
@@ -106,14 +114,14 @@ document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 <div class="tabber">
 
 
-	 <!-- 'About Us' Tab -->
+	 <!-- 'Home' Tab -->
      <div class="tabbertab">
-	  <h2>About us</h2>
+	  <h2>Home</h2>
 	  <div class="entire_page">
 			<tr> 
 				<td>
 					<div align='center'>
-						<h4> About us </h4>
+						<h4> Home </h4>
 					</div>
 					<hr />
 					<p>
@@ -386,235 +394,251 @@ document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 				<tr>			
 				<td class='half'>				
 					<div id="news_sites"> 
-						<h4> News: </h4> 
-						<label> 
-							<input type="checkbox" name="news_item" value="cnn" onClick="show_estimate(this, 5);" id='cnn_checkbox' /> 
-							CNN 
-						</label> 
+						<input type="checkbox" name="news_title" value="news" onClick="select_all_items('news');toggle_div(this, 'news_sites_list');" />
+						<b>News</b>
 						<br />
-						<!--
-						<div class='inline'> 
-							<span id="cnn_results"> </span>
-							<span id="cnn_more_info_detailed"  ></span>
-							<span id="cnn_history" class="history_span" ></span>
-							<div> </div>
-						</div>
-						-->
-						
-									
-						<label> 
-							<input type="checkbox" name="news_item" value="la" onclick="show_estimate(this, 5);"  /> 
-							 Los Angeles Times  
-						</label>
-						<br />
-						<!--
-						<div class='inline'>
-							<span id="la_results"> </span>
-							<span id="la_more_info_detailed"  ></span>
-							<span id="la_history" class="history_span" ></span>
-							<div> </div>
-						</div>
-						-->
-						
-						
-						<label> 
-							<input type="checkbox" name="news_item" value="msn" onclick="show_estimate(this, 5);"  /> 
-							 MSNBC  
-						</label>
-						<div class='inline'>
-							<span id="msn_results"> </span> 
-							<span id="msn_more_info_detailed"  ></span>
-							<span id="msn_history" class="history_span"  ></span>
-							<div> </div>
-						</div>		
-						
-						
-						<label> 
-							<input type="checkbox" name="news_item" value="ny" onclick="show_estimate(this, 5);"  /> 
-							 New York Times  
-						</label>
-						<div class='inline'>
-							<span id="ny_results"> </span>
-							<span id="ny_more_info_detailed"  ></span>
-							<span id="ny_history" class="history_span"  ></span>
-							<div> </div>
-						</div>						
-						
-						<label> 
-							<input type="checkbox" name="news_item" value="wp" onclick="show_estimate(this, 5);"  /> 
-							 Washington Post  
-						</label>
-						<div class='inline'>
-							<span id="wp_results"> </span> 
-							<span id="wp_more_info_detailed"  ></span>
-							<span id="wp_history" class="history_span"  ></span>
-							<div> </div>
-						</div>
-						
-						
-						<label> 
-							<input type="checkbox" name="news_item" value="abc" onclick="show_estimate(this, 5);"  /> 
-							 ABC News  
-						</label>
-						<div class='inline'>
-							<span id="abc_results"> </span> 
-							<span id="abc_more_info_detailed"  ></span>
-							<span id="abc_history" class="history_span"  ></span>
-							<div> </div>
-						</div>						
-						
-						<label> 
-							<input type="checkbox" name="news_item" value="ru" onclick="show_estimate(this, 5);"  /> 
-							Reuters  
-						</label>
-						<div class='inline'>
-							<span id="ru_results"> </span> 
-							<span id="ru_more_info_detailed"  ></span>
-							<span id="ru_history" class="history_span"  ></span>
-							<div> </div>
-						</div>						
-						
-						<label> 
-							<input type="checkbox" name="news_item" value="bbc" onclick="show_estimate(this, 5);"  /> 
-							BBC  
-						</label>
-						<div class='inline'>
-							<span id="bbc_results"> </span>
-							<span id="bbc_more_info_detailed"  ></span>
-							<span id="bbc_history" class="history_span"  ></span>
-							<div> </div>
-						</div>
-						
-						<label> 
-							<input type="checkbox" name="news_item" value="hp" onclick="show_estimate(this, 5);"  /> 
-							Huffington Post  
-						</label>
-						<div class='inline'>
-							<span id="hp_results"> </span> 
-							<span id="hp_more_info_detailed"  ></span>
-							<span id="hp_history" class="history_span"  ></span>
-							<div> </div>
-						</div>
-						
-						
-						<label> 
-							<input type="checkbox" name="news_item" value="ut" onclick="show_estimate(this, 5);"  /> 
-							USA Today  
-						</label>
-						<div class='inline'>
-							<span id="ut_results"> </span> 
-							<span id="ut_more_info_detailed"  ></span>
-							<span id="ut_history" class="history_span"  ></span>
-							<div> </div>
+						<div id="news_sites_list" style="display:none; visibility: hidden;">
+							<label> 
+								<input type="checkbox" name="news_item" value="cnn" onClick="show_estimate(this, 5);" id='cnn_checkbox' /> 
+								CNN 
+							</label> 
+							<br />
+							<!--
+							<div class='inline'> 
+								<span id="cnn_results"> </span>
+								<span id="cnn_more_info_detailed"  ></span>
+								<span id="cnn_history" class="history_span" ></span>
+								<div> </div>
+							</div>
+							-->
+							
+										
+							<label> 
+								<input type="checkbox" name="news_item" value="la" onclick="show_estimate(this, 5);"  /> 
+								 Los Angeles Times  
+							</label>
+							<br />
+							<!--
+							<div class='inline'>
+								<span id="la_results"> </span>
+								<span id="la_more_info_detailed"  ></span>
+								<span id="la_history" class="history_span" ></span>
+								<div> </div>
+							</div>
+							-->
+							
+							
+							<label> 
+								<input type="checkbox" name="news_item" value="msn" onclick="show_estimate(this, 5);"  /> 
+								 MSNBC  
+							</label>
+							<div class='inline'>
+								<span id="msn_results"> </span> 
+								<span id="msn_more_info_detailed"  ></span>
+								<span id="msn_history" class="history_span"  ></span>
+								<div> </div>
+							</div>		
+							
+							
+							<label> 
+								<input type="checkbox" name="news_item" value="ny" onclick="show_estimate(this, 5);"  /> 
+								 New York Times  
+							</label>
+							<div class='inline'>
+								<span id="ny_results"> </span>
+								<span id="ny_more_info_detailed"  ></span>
+								<span id="ny_history" class="history_span"  ></span>
+								<div> </div>
+							</div>						
+							
+							<label> 
+								<input type="checkbox" name="news_item" value="wp" onclick="show_estimate(this, 5);"  /> 
+								 Washington Post  
+							</label>
+							<div class='inline'>
+								<span id="wp_results"> </span> 
+								<span id="wp_more_info_detailed"  ></span>
+								<span id="wp_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+							
+							
+							<label> 
+								<input type="checkbox" name="news_item" value="abc" onclick="show_estimate(this, 5);"  /> 
+								 ABC News  
+							</label>
+							<div class='inline'>
+								<span id="abc_results"> </span> 
+								<span id="abc_more_info_detailed"  ></span>
+								<span id="abc_history" class="history_span"  ></span>
+								<div> </div>
+							</div>						
+							
+							<label> 
+								<input type="checkbox" name="news_item" value="ru" onclick="show_estimate(this, 5);"  /> 
+								Reuters  
+							</label>
+							<div class='inline'>
+								<span id="ru_results"> </span> 
+								<span id="ru_more_info_detailed"  ></span>
+								<span id="ru_history" class="history_span"  ></span>
+								<div> </div>
+							</div>						
+							
+							<label> 
+								<input type="checkbox" name="news_item" value="bbc" onclick="show_estimate(this, 5);"  /> 
+								BBC  
+							</label>
+							<div class='inline'>
+								<span id="bbc_results"> </span>
+								<span id="bbc_more_info_detailed"  ></span>
+								<span id="bbc_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+							
+							<label> 
+								<input type="checkbox" name="news_item" value="hp" onclick="show_estimate(this, 5);"  /> 
+								Huffington Post  
+							</label>
+							<div class='inline'>
+								<span id="hp_results"> </span> 
+								<span id="hp_more_info_detailed"  ></span>
+								<span id="hp_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+							
+							
+							<label> 
+								<input type="checkbox" name="news_item" value="ut" onclick="show_estimate(this, 5);"  /> 
+								USA Today  
+							</label>
+							<div class='inline'>
+								<span id="ut_results"> </span> 
+								<span id="ut_more_info_detailed"  ></span>
+								<span id="ut_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
 						</div>
 						
 					</div>
+					
+					<br />
 					
 					<div id="social_sites"> 
-						<h4> Social Networks: </h4> 
-						<label> 
-							<input type="checkbox" name="social_item" value="fb" onclick="show_estimate(this, 5);" id='fb_checkbox' /> 
-							Facebook  
-						</label>
-						<div class='inline'>
-							<span id="fb_results"> </span>
-							<span id="fb_more_info_detailed" ></span>
-							<span id="fb_history" class="history_span"  ></span>
-							<div></div>
-						</div>
-						<label> 
-							<input type="checkbox" name="social_item" value="tw" onclick="show_estimate(this, 5);" /> 
-							Twitter  
-						</label>
-						<div class='inline'>
-							<span id="tw_results"> </span>
-							<span id="tw_more_info_detailed" ></span>
-							<span id="tw_history" class="history_span"  ></span>
-							<div> </div>
-						</div>
-						<label> 
-							<input type="checkbox" name="social_item" value="ms" onclick="show_estimate(this, 5);"  /> 
-							MySpace  
-						</label>
-						<div class='inline'>
-							<span id="ms_results"> </span> 
-							<span id="ms_more_info_detailed" ></span>
-							<span id="ms_history" class="history_span"  ></span>
-							<div> </div>
-						</div>
-						<label> 
-							<input type="checkbox" name="social_item" value="fr" onclick="show_estimate(this, 5);"  /> 
-							Friendster
-						</label>
-						<div class='inline'>
-							<span id="fr_results"> </span>
-							<span id="fr_more_info_detailed" ></span>
-							<span id="fr_history" class="history_span"  ></span>
-							<div> </div>
-						</div>
-						<label> 
-							<input type="checkbox" name="social_item" value="ld" onclick="show_estimate(this, 5);"  /> 
-							LinkedIn  
-						</label>
-						<div class='inline'>
-							<span id="ld_results"> </span> 
-							<span id="ld_more_info_detailed" ></span>
-							<span id="ld_history" class="history_span"  ></span>
-							<div> </div>
+						<input type="checkbox" name="social_title" value="social" onClick="select_all_items('social');toggle_div(this, 'social_sites_list');" />
+						<b>Social Networks</b>
+						<br />
+						<div id="social_sites_list" style="display:none; visibility: hidden;">
+							<label> 
+								<input type="checkbox" name="social_item" value="fb" onclick="show_estimate(this, 5);" id='fb_checkbox' /> 
+								Facebook  
+							</label>
+							<div class='inline'>
+								<span id="fb_results"> </span>
+								<span id="fb_more_info_detailed" ></span>
+								<span id="fb_history" class="history_span"  ></span>
+								<div></div>
+							</div>
+							<label> 
+								<input type="checkbox" name="social_item" value="tw" onclick="show_estimate(this, 5);" /> 
+								Twitter  
+							</label>
+							<div class='inline'>
+								<span id="tw_results"> </span>
+								<span id="tw_more_info_detailed" ></span>
+								<span id="tw_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+							<label> 
+								<input type="checkbox" name="social_item" value="ms" onclick="show_estimate(this, 5);"  /> 
+								MySpace  
+							</label>
+							<div class='inline'>
+								<span id="ms_results"> </span> 
+								<span id="ms_more_info_detailed" ></span>
+								<span id="ms_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+							<label> 
+								<input type="checkbox" name="social_item" value="fr" onclick="show_estimate(this, 5);"  /> 
+								Friendster
+							</label>
+							<div class='inline'>
+								<span id="fr_results"> </span>
+								<span id="fr_more_info_detailed" ></span>
+								<span id="fr_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+							<label> 
+								<input type="checkbox" name="social_item" value="ld" onclick="show_estimate(this, 5);"  /> 
+								LinkedIn  
+							</label>
+							<div class='inline'>
+								<span id="ld_results"> </span> 
+								<span id="ld_more_info_detailed" ></span>
+								<span id="ld_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
 						</div>
 					</div>
 					
+					<br />
+					
 					<div id="shopping_sites"> 
-						<h4> Shopping: </h4> 
-						<label> 
-							<input type="checkbox" name="shopping_item" value="eb" onclick="show_estimate(this, 5);" id='eb_checkbox'  /> 
-							Ebay 
-						</label> 
-						<div class='inline'>
-							<span id="eb_results"> </span>
-							<span id="eb_more_info_detailed" ></span>
-							<span id="eb_history" class="history_span"  ></span>
-							<div> </div>
-						</div>
-						<label>
-							<input type="checkbox" name="shopping_item" value="az" onclick="show_estimate(this, 5);"  /> 
-							Amazon
-						</label>
-						<div class='inline'>
-							<span id="az_results"> </span>
-							<span id="az_more_info_detailed" ></span>
-							<span id="az_history" class="history_span"  ></span>
-							<div> </div>
-						</div>
-						<label> 
-							<input type="checkbox" name="shopping_item" value="br" onclick="show_estimate(this, 5);"  /> 
-							Bizrate 
-						</label> 
-						<div class='inline'>
-							<span id="br_results"> </span> 
-							<span id="br_more_info_detailed" ></span>
-							<span id="br_history" class="history_span"  ></span>
-							<div> </div>
-						</div>
-						<label> 
-							<input type="checkbox" name="shopping_item" value="gt" onclick="show_estimate(this, 5);"  /> 
-							Giftag 
-						</label> 
-						<div class='inline'>
-							<span id="gt_results"> </span>
-							<span id="gt_more_info_detailed" ></span>
-							<span id="gt_history" class="history_span"  ></span>
-							<div> </div>
-						</div>
-						<label> 
-							<input type="checkbox" name="shopping_item" value="sb" onclick="show_estimate(this, 5);"  /> 
-							 Smartbargains 
-						</label> 
-						<div class='inline'>
-							<span id="sb_results"> </span> 
-							<span id="sb_more_info_detailed" ></span>
-							<span id="sb_history" class="history_span"  ></span>
-							<div> </div>
+						<input type="checkbox" name="shopping_title" value="shopping" onClick="select_all_items('shopping');toggle_div(this, 'shopping_sites_list');" />
+						<b>Shopping</b>
+						<br />
+						<div id="shopping_sites_list" style="display:none; visibility: hidden;">
+							<label> 
+								<input type="checkbox" name="shopping_item" value="eb" onclick="show_estimate(this, 5);" id='eb_checkbox'  /> 
+								Ebay 
+							</label> 
+							<div class='inline'>
+								<span id="eb_results"> </span>
+								<span id="eb_more_info_detailed" ></span>
+								<span id="eb_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+							<label>
+								<input type="checkbox" name="shopping_item" value="az" onclick="show_estimate(this, 5);"  /> 
+								Amazon
+							</label>
+							<div class='inline'>
+								<span id="az_results"> </span>
+								<span id="az_more_info_detailed" ></span>
+								<span id="az_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+							<label> 
+								<input type="checkbox" name="shopping_item" value="br" onclick="show_estimate(this, 5);"  /> 
+								Bizrate 
+							</label> 
+							<div class='inline'>
+								<span id="br_results"> </span> 
+								<span id="br_more_info_detailed" ></span>
+								<span id="br_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+							<label> 
+								<input type="checkbox" name="shopping_item" value="gt" onclick="show_estimate(this, 5);"  /> 
+								Giftag 
+							</label> 
+							<div class='inline'>
+								<span id="gt_results"> </span>
+								<span id="gt_more_info_detailed" ></span>
+								<span id="gt_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+							<label> 
+								<input type="checkbox" name="shopping_item" value="sb" onclick="show_estimate(this, 5);"  /> 
+								 Smartbargains 
+							</label> 
+							<div class='inline'>
+								<span id="sb_results"> </span> 
+								<span id="sb_more_info_detailed" ></span>
+								<span id="sb_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
 						</div>
 					</div>
 				</td>
@@ -624,9 +648,9 @@ document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 					
 					<label> 
 						<input type="checkbox" name="file_hosting_item" onclick="show_estimate(this, 15,'file_hosting_results');" value='file_hosting' />  
-						<h4 style='display: inline; margin-left: 0px; '> 
+						<b>
 							File Hosting Services (ex. Rapidshare, Hotfile, Depositfiles etc.) 
-						</h4>
+						</b>
 					</label> 
 					<br />
 					<div class='inline'>
@@ -638,143 +662,147 @@ document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 						<span id="file_hosting_history" class="history_span"> </span>
 						<div> </div>
 					</div>
-					<h4> Online Games: </h4>
-					
-					<label><input type="checkbox" name="game_0" value="wow" onclick="toggle_div(this, 'game_0_locations');" /> 
-					 World of Warcraft </label>
-					
-					<div id="game_0_locations" style="display:none; visibility: hidden;">
+					<br />
+					<input type="checkbox" name="game_title" value="games" onClick="select_all_items('game');toggle_div(this, 'game_sites_list');" />
+					<b>Games</b>
+					<br />
+					<div id="game_sites_list" style="display:none; visibility: hidden;">
+						<label><input type="checkbox" name="game_0" value="wow" onclick="toggle_div(this, 'game_0_locations');" /> 
+						 World of Warcraft </label>
+						
+						<div id="game_0_locations" style="display:none; visibility: hidden;">
+							<br /> 
+							<label>
+								<input type="checkbox" name="game_item" value="wow_us" onclick="show_estimate(this, 20,'game_results_wow_us');"  id='wow_us_checkbox'  /> 
+								US  
+							</label> 
+							<div class='inline'>
+								<span id='game_results_wow_us'> </span> 
+								<span id='game_results_wow_us_more_info_detailed'> </span> 
+								<span id="wow_us_history" class="history_span"  ></span>
+								<div> </div>
+							</div>						
+							<label>
+								<input type="checkbox" name="game_item" value="wow_australia" onclick="show_estimate(this, 20,'game_results_wow_australia');"  /> 
+								Australia  
+							</label> 
+							<div class='inline'>
+								<span id='game_results_wow_australia'> </span>  
+								<span id='game_results_wow_australia_more_info_detailed'>  </span> 
+								<span id="wow_australia_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+							<label>
+								<input type="checkbox" name="game_item" value="wow_europe" onclick="show_estimate(this, 20,'game_results_wow_europe');"  /> 
+								Europe 
+							</label>  
+							<div class='inline'>
+								<span id='game_results_wow_europe'> </span>  
+								<span id='game_results_wow_europe_more_info_detailed'> </span> 
+								<span id="wow_europe_history" class="history_span"  > </span>
+								<div> </div>
+							</div>						
+							<label>
+								<input type="checkbox" name="game_item" value="wow_china" onclick="show_estimate(this, 20,'game_results_wow_china');"  /> 
+								China 
+							</label>  
+							<div class='inline'>
+								<span id='game_results_wow_china'> </span>  
+								<span id='game_results_wow_china_more_info_detailed'> </span> 
+								<span id="wow_china_history" class="history_span"  > </span>
+								<div> </div>
+							</div>						
+							<label>
+								<input type="checkbox" name="game_item" value="wow_taiwan" onclick="show_estimate(this, 20,'game_results_wow_taiwan');"  /> 
+								Taiwan 
+							</label>  
+							<div class='inline'>
+								<span id='game_results_wow_taiwan'> </span>  
+								<span id='game_results_wow_taiwan_more_info_detailed'>  </span> 
+								<span id="wow_taiwan_history" class="history_span"  ></span>
+								<div> </div>
+							</div>						
+							<label>
+								<input type="checkbox" name="game_item" value="wow_korea" onclick="show_estimate(this, 20,'game_results_wow_korea');"  /> 
+								Korea  
+							</label> 
+							<div class='inline'>
+								<span id='game_results_wow_korea'> </span>  
+								<span id='game_results_wow_korea_more_info_detailed'> </span> 
+								<span id="wow_korea_history" class="history_span"  > </span>
+								<div> </div>
+							</div>
+						</div>
+						
+						<br />  <label> <input type="checkbox" name="game_1" value="lol" onclick="toggle_div(this, 'game_1_locations');" /> 
+						 League of Legends </label> 
+									
+						<div id="game_1_locations" style="display:none; visibility:hidden;">
+							<br /> 
+							<label>
+								<input type="checkbox" name="game_item" value="lol_us"  onclick="show_estimate(this, 20,'game_results_lol_us');"  /> 
+								US  
+							</label> 
+							<div class='inline'>
+								<span id='game_results_lol_us'> </span> 
+								<span id='game_results_lol_us_more_info_detailed'>  </span> 
+								<span id="lol_us_history" class="history_span"  ></span>
+								<div> </div>
+							</div>	
+							<label>
+								<input type="checkbox" name="game_item" value="lol_europe" onclick="show_estimate(this, 20,'game_results_lol_europe');"  /> 
+								Europe 
+							</label>  
+							<div class='inline'>
+								<span id='game_results_lol_europe'> </span>  
+								<span id='game_results_lol_europe_more_info_detailed'> </span> 
+								<span id="lol_europe_history" class="history_span"  > </span>
+								<div> </div>
+							</div>
+							<label>
+								<input type="checkbox" name="game_item" value="lol_asia" onclick="show_estimate(this, 20,'game_results_lol_asia');"  /> 
+								Asia  
+							</label> 
+							<div class='inline'>
+								<span id='game_results_lol_asia'> </span>  
+								<span id='game_results_lol_asia_more_info_detailed'> </span> 
+								<span id="lol_asia_history" class="history_span"  > </span>
+								<div> </div>
+							</div>
+						</div>
+						
 						<br /> 
 						<label>
-							<input type="checkbox" name="game_item" value="wow_us" onclick="show_estimate(this, 20,'game_results_wow_us');"  id='wow_us_checkbox'  /> 
-							US  
+							<input type="checkbox" name="game_item" value="cod2"  onclick="show_estimate(this, 60,'game_results_cod2');" /> 
+							Call of Duty 2  
 						</label> 
 						<div class='inline'>
-							<span id='game_results_wow_us'> </span> 
-							<span id='game_results_wow_us_more_info_detailed'> </span> 
-							<span id="wow_us_history" class="history_span"  ></span>
+							<span id='game_results_cod2'> </span> 
+							<span id='game_results_cod2_more_info_detailed'> </span>  
+							<span id="cod2_history" class="history_span"  > </span>
 							<div> </div>
-						</div>						
+						</div>
+						
 						<label>
-							<input type="checkbox" name="game_item" value="wow_australia" onclick="show_estimate(this, 20,'game_results_wow_australia');"  /> 
-							Australia  
+							<input type="checkbox" name="game_item" value="cod4" onclick="show_estimate(this, 60 ,'game_results_cod4');" /> 
+							Call of Duty 4  
 						</label> 
 						<div class='inline'>
-							<span id='game_results_wow_australia'> </span>  
-							<span id='game_results_wow_australia_more_info_detailed'>  </span> 
-							<span id="wow_australia_history" class="history_span"  ></span>
+							<span id='game_results_cod4'> </span> 
+							<span id='game_results_cod4_more_info_detailed'> </span>  
+							<span id="cod4_history" class="history_span"  > </span>
 							<div> </div>
 						</div>
 						<label>
-							<input type="checkbox" name="game_item" value="wow_europe" onclick="show_estimate(this, 20,'game_results_wow_europe');"  /> 
-							Europe 
-						</label>  
-						<div class='inline'>
-							<span id='game_results_wow_europe'> </span>  
-							<span id='game_results_wow_europe_more_info_detailed'> </span> 
-							<span id="wow_europe_history" class="history_span"  > </span>
-							<div> </div>
-						</div>						
-						<label>
-							<input type="checkbox" name="game_item" value="wow_china" onclick="show_estimate(this, 20,'game_results_wow_china');"  /> 
-							China 
-						</label>  
-						<div class='inline'>
-							<span id='game_results_wow_china'> </span>  
-							<span id='game_results_wow_china_more_info_detailed'> </span> 
-							<span id="wow_china_history" class="history_span"  > </span>
-							<div> </div>
-						</div>						
-						<label>
-							<input type="checkbox" name="game_item" value="wow_taiwan" onclick="show_estimate(this, 20,'game_results_wow_taiwan');"  /> 
-							Taiwan 
-						</label>  
-						<div class='inline'>
-							<span id='game_results_wow_taiwan'> </span>  
-							<span id='game_results_wow_taiwan_more_info_detailed'>  </span> 
-							<span id="wow_taiwan_history" class="history_span"  ></span>
-							<div> </div>
-						</div>						
-						<label>
-							<input type="checkbox" name="game_item" value="wow_korea" onclick="show_estimate(this, 20,'game_results_wow_korea');"  /> 
-							Korea  
+							<input type="checkbox" name="game_item" value="tf2" onclick="show_estimate(this, 60,'game_results_tf2');" /> 
+							Team Fortress 2  
 						</label> 
 						<div class='inline'>
-							<span id='game_results_wow_korea'> </span>  
-							<span id='game_results_wow_korea_more_info_detailed'> </span> 
-							<span id="wow_korea_history" class="history_span"  > </span>
+							<span id='game_results_tf2'> </span> 
+							<span id='game_results_tf2_more_info_detailed'> </span> 
+							<span id="tf2_history" class="history_span"  > </span>
 							<div> </div>
 						</div>
-					</div>
-					
-					<br />  <label> <input type="checkbox" name="game_1" value="lol" onclick="toggle_div(this, 'game_1_locations');" /> 
-					 League of Legends </label> 
-								
-					<div id="game_1_locations" style="display:none; visibility:hidden;">
-						<br /> 
-						<label>
-							<input type="checkbox" name="game_item" value="lol_us"  onclick="show_estimate(this, 20,'game_results_lol_us');"  /> 
-							US  
-						</label> 
-						<div class='inline'>
-							<span id='game_results_lol_us'> </span> 
-							<span id='game_results_lol_us_more_info_detailed'>  </span> 
-							<span id="lol_us_history" class="history_span"  ></span>
-							<div> </div>
-						</div>	
-						<label>
-							<input type="checkbox" name="game_item" value="lol_europe" onclick="show_estimate(this, 20,'game_results_lol_europe');"  /> 
-							Europe 
-						</label>  
-						<div class='inline'>
-							<span id='game_results_lol_europe'> </span>  
-							<span id='game_results_lol_europe_more_info_detailed'> </span> 
-							<span id="lol_europe_history" class="history_span"  > </span>
-							<div> </div>
-						</div>
-						<label>
-							<input type="checkbox" name="game_item" value="lol_asia" onclick="show_estimate(this, 20,'game_results_lol_asia');"  /> 
-							Asia  
-						</label> 
-						<div class='inline'>
-							<span id='game_results_lol_asia'> </span>  
-							<span id='game_results_lol_asia_more_info_detailed'> </span> 
-							<span id="lol_asia_history" class="history_span"  > </span>
-							<div> </div>
-						</div>
-					</div>
-					
-					<br /> 
-					<label>
-						<input type="checkbox" name="game_item" value="cod2"  onclick="show_estimate(this, 60,'game_results_cod2');" /> 
-						Call of Duty 2  
-					</label> 
-					<div class='inline'>
-						<span id='game_results_cod2'> </span> 
-						<span id='game_results_cod2_more_info_detailed'> </span>  
-						<span id="cod2_history" class="history_span"  > </span>
-						<div> </div>
-					</div>
-					
-					<label>
-						<input type="checkbox" name="game_item" value="cod4" onclick="show_estimate(this, 60 ,'game_results_cod4');" /> 
-						Call of Duty 4  
-					</label> 
-					<div class='inline'>
-						<span id='game_results_cod4'> </span> 
-						<span id='game_results_cod4_more_info_detailed'> </span>  
-						<span id="cod4_history" class="history_span"  > </span>
-						<div> </div>
-					</div>
-					<label>
-						<input type="checkbox" name="game_item" value="tf2" onclick="show_estimate(this, 60,'game_results_tf2');" /> 
-						Team Fortress 2  
-					</label> 
-					<div class='inline'>
-						<span id='game_results_tf2'> </span> 
-						<span id='game_results_tf2_more_info_detailed'> </span> 
-						<span id="tf2_history" class="history_span"  > </span>
-						<div> </div>
 					</div>
 					<div id='video_conference'>
 						<h4> Video Only Conference: </h4>
@@ -1029,16 +1057,49 @@ document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 			</div>
 		</p>
 	 </div>
+	
+	<!-- Apps Tab -->
+	<div class="tabbertab">
+		<h2>Apps</h2>
+		<p>
+			<div class="entire_page">
+				<div align='center'>
+					<h4>Apps</h4>
+					<hr />
+				</div>
+					<table align="center" border="2px" cellpadding="3px" cellspacing="3px">
+						<tr>
+							<td width="50%">
+								<div align="center">
+									<a href="https://play.google.com/store/apps/details?id=com.mhuang.overclocking&feature=top-paid#?t=W251bGwsMSwxLDIwNiwiY29tLm1odWFuZy5vdmVyY2xvY2tpbmciXQ..">
+										<img src="images/nexus4.png" style="height:272px;"></img>
+										<p>Android</p>
+									</a>
+								</div>
+							</td>
+							<td width="50%">
+								<div align="center">
+									<a href="https://itunes.apple.com/us/app/find-my-iphone/id376101648?mt=8">
+										<img src="images/iphone.jpg" style="height:272px;"></img>
+										<p>iPhone</p>
+									</a>
+								</div>
+							</td>
+						</tr>
+					</table>
+			</div>
+		</p>
+	 </div>
 	 
-	 <!-- 'Methodology' Tab -->
+	 <!-- 'About' Tab -->
      <div class="tabbertab">
-	  <h2>Methodology</h2>
+	  <h2>About</h2>
 	  <p> 
 		<div class="entire_page"> 
 			<tr> 
 				<td>
 					<div align='center'>
-						<h4> Methodology </h4>
+						<h4>About</h4>
 					</div>
 					<hr />
 					<p> 
