@@ -87,11 +87,9 @@ document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 		   
 function select_all_items(item_prefix){
 	var news_items = document.getElementsByName(item_prefix+'_item');
-	var selected = document.getElementsByName(item_prefix+'_title')[0].checked;
 	for(var i=0;i<news_items.length;i++){
-		news_items[i].checked = selected;
+		news_items[i].click();
 	}
-
 }
 </script>
 <style type="text/css">
@@ -330,67 +328,14 @@ function select_all_items(item_prefix){
 				<div align='center'>
 					<h4> Performance Tests </h4>
 				</div>
-				<hr />
 				
-				<div id="survey_1" style='background-color: #DADADA;'>												
-					<table class='survey_table'>	
-						<tr>
-							<tr>
-								<td colspan='2' style='font-weight: bold; text-align: center;'>
-									Filling in your connection settings will let you compare your results to users similar to you:
-								</td>								
-							</tr>
-							<td>
-								What type of Internet connection do you have?
-							</td>
-							<td>
-								<label> <input type="radio" name="connection_type" value="dial_up" /> Dial-up </label>
-								<label> <input type="radio" name="connection_type" value="dsl" /> DSL </label>
-								<label> <input type="radio" name="connection_type" value="cable" /> Cable </label>
-								<label> <input type="radio" name="connection_type" value="fiber" /> Fiber </label>
-								<label> <input type="radio" name="connection_type" value="business" /> Business </label>
-								<label> <input type="radio" name="connection_type" value="other" /> Other </label>
-								<label> <input type="radio" name="connection_type" value="dont_know" /> Don't know </label>
-										<input type="radio" name="connection_type" value="not_selected" checked style="display:none"  />
-							</td>
-						</tr>
-						<tr>
-							<td>
-								How are you accessing Internet?
-							</td>
-							<td>
-								<label> <input type="radio" name="connection_access" value="wireless" /> Wireless </label>
-								<label> <input type="radio" name="connection_access" value="wired" /> Wired	</label>
-								<label> <input type="radio" name="connection_access" value="dont_know" /> Don't know </label>
-										<input type="radio" name="connection_access" value="not_selected" checked  style="display:none" />
-								
-							</td>
-						</tr>	
-						<tr>
-							<td>
-								Where are you accessing Internet?
-							</td>
-							<td>
-								<label> <input type="radio" name="connection_location" value="home" /> Home </label>
-								<label> <input type="radio" name="connection_location" value="work" /> Work </label>	
-								<label> <input type="radio" name="connection_location" value="school" /> School </label>
-								<label> <input type="radio" name="connection_location" value="public" /> Public location </label>
-								<label> <input type="radio" name="connection_location" value="other" /> Other </label>
-								<label> <input type="radio" name="connection_location" value="dont_know" /> Don't know </label>
-										<input type="radio" name="connection_location" value="not_selected" checked style="display:none"  />
-							</td>
-						</tr>	
-					</table>
-					<br />
-				</div>
 				<hr />
-				<table id="test_page_table">			
+				<table id="test_page_table" align='center'>			
 				<tr>
 					<td colspan=2>
 						<h4> Please select applications and sites of interest to you: </h4>
 					</td>	
 				</tr>
-				
 				<tr>			
 				<td class='half'>				
 					<div id="news_sites"> 
@@ -432,92 +377,114 @@ function select_all_items(item_prefix){
 								<input type="checkbox" name="news_item" value="msn" onclick="show_estimate(this, 5);"  /> 
 								 MSNBC  
 							</label>
+							<br />
+							<!--
 							<div class='inline'>
 								<span id="msn_results"> </span> 
 								<span id="msn_more_info_detailed"  ></span>
 								<span id="msn_history" class="history_span"  ></span>
 								<div> </div>
 							</div>		
-							
+							-->
 							
 							<label> 
 								<input type="checkbox" name="news_item" value="ny" onclick="show_estimate(this, 5);"  /> 
 								 New York Times  
 							</label>
+							<br />
+							<!--
 							<div class='inline'>
 								<span id="ny_results"> </span>
 								<span id="ny_more_info_detailed"  ></span>
 								<span id="ny_history" class="history_span"  ></span>
 								<div> </div>
-							</div>						
+							</div>
+							-->
 							
 							<label> 
 								<input type="checkbox" name="news_item" value="wp" onclick="show_estimate(this, 5);"  /> 
 								 Washington Post  
 							</label>
+							<br />
+							<!--
 							<div class='inline'>
 								<span id="wp_results"> </span> 
 								<span id="wp_more_info_detailed"  ></span>
 								<span id="wp_history" class="history_span"  ></span>
 								<div> </div>
 							</div>
+							-->
 							
 							
 							<label> 
 								<input type="checkbox" name="news_item" value="abc" onclick="show_estimate(this, 5);"  /> 
 								 ABC News  
 							</label>
+							<br />
+							<!--
 							<div class='inline'>
 								<span id="abc_results"> </span> 
 								<span id="abc_more_info_detailed"  ></span>
 								<span id="abc_history" class="history_span"  ></span>
 								<div> </div>
 							</div>						
+							-->
 							
 							<label> 
 								<input type="checkbox" name="news_item" value="ru" onclick="show_estimate(this, 5);"  /> 
 								Reuters  
 							</label>
+							<br />
+							<!--
 							<div class='inline'>
 								<span id="ru_results"> </span> 
 								<span id="ru_more_info_detailed"  ></span>
 								<span id="ru_history" class="history_span"  ></span>
 								<div> </div>
 							</div>						
+							-->
 							
 							<label> 
 								<input type="checkbox" name="news_item" value="bbc" onclick="show_estimate(this, 5);"  /> 
 								BBC  
 							</label>
+							<br />
+							<!--
 							<div class='inline'>
 								<span id="bbc_results"> </span>
 								<span id="bbc_more_info_detailed"  ></span>
 								<span id="bbc_history" class="history_span"  ></span>
 								<div> </div>
 							</div>
+							-->
 							
 							<label> 
 								<input type="checkbox" name="news_item" value="hp" onclick="show_estimate(this, 5);"  /> 
 								Huffington Post  
 							</label>
+							<br />
+							<!--
 							<div class='inline'>
 								<span id="hp_results"> </span> 
 								<span id="hp_more_info_detailed"  ></span>
 								<span id="hp_history" class="history_span"  ></span>
 								<div> </div>
 							</div>
-							
+							-->
 							
 							<label> 
 								<input type="checkbox" name="news_item" value="ut" onclick="show_estimate(this, 5);"  /> 
 								USA Today  
 							</label>
+							<br />
+							<!--
 							<div class='inline'>
 								<span id="ut_results"> </span> 
 								<span id="ut_more_info_detailed"  ></span>
 								<span id="ut_history" class="history_span"  ></span>
 								<div> </div>
 							</div>
+							-->
 						</div>
 						
 					</div>
@@ -804,100 +771,159 @@ function select_all_items(item_prefix){
 							<div> </div>
 						</div>
 					</div>
-					<div id='video_conference'>
-						<h4> Video Only Conference: </h4>
-						
-						<div id="voip_locations"> 
-							
-							<label> 
-								<input type="checkbox" name="camera_item" value="0" onclick="show_estimate(this, 15,'camera_results_0');" id='voip_us_checkbox' /> 
-								US East Coast 
-							</label>
-							<div class='inline'>
-								<span id='camera_results_0'> </span> 
-								<div id='camera_ind_0' style='display:none;visibility:hidden'><img src='indicator_medium.gif' /></div>
-								<span id="camera_0_more_info_detailed" ></span> 
-								<span id="camera_0_history" class="history_span"  ></span>
-								<div> </div>
-							</div>
-								
-							<label> 
-								<input type="checkbox" name="camera_item" value="1" onclick="show_estimate(this, 15,'camera_results_1');" /> 
-								US West Coast 
-							</label>
-							<div class='inline'>
-								<span id='camera_results_1'></span> 
-								<div id='camera_ind_1' style='display:none;visibility:hidden'><img src='indicator_medium.gif' /></div>
-								<span id="camera_1_more_info_detailed" ></span>
-								<span id="camera_1_history" class="history_span"  ></span>
-								<div> </div>
-							</div>
-								
-							<label> 
-								<input type="checkbox" name="camera_item" value="2" onclick="show_estimate(this, 15,'camera_results_2');" /> 
-								Europe 
-							</label>
-							<div class='inline'>
-								<span id='camera_results_2'> </span> 
-								<div id='camera_ind_2' style='display:none;visibility:hidden'> <img src='indicator_medium.gif' /></div> 
-								<span id="camera_2_more_info_detailed" ></span>
-								<span id="camera_2_history" class="history_span"  ></span>
-								<div> </div>
-							</div>
-								
-						</div>						
-					</div>
 					
-					<div id='voice_conference'>
-						<h4> Voice Conference: </h4>
+					<br />
+					<div id='video_conference'>
+						<input type="checkbox" name="camera_title" value="camera" onClick="select_all_items('camera');toggle_div(this, 'camera_sites_list');" />
+						<b>Video Conference</b>
+						<br />
+						<div id="camera_sites_list" style="display:none; visibility: hidden;">
 						
-						<div id="voip_locations"> 
-							
-							<label> 
-								<input type="checkbox" name="voip_item" value="0" onclick="show_estimate(this, 60,'voip_results_0');" id='voip_us_checkbox' /> 
-								US East Coast 
-							</label> 
-							<div class='inline'>
-								<span id='voip_results_0'> </span> 
-								<span id="voip_0_more_info_detailed" ></span> 
-								<span id="voip_0_history" class="history_span"  ></span>								
-								<div> </div>
+									<div id="voip_locations"> 
+										<label> 
+											<input type="checkbox" name="camera_item" value="0" onclick="show_estimate(this, 15,'camera_results_0');" id='voip_us_checkbox' /> 
+											US East Coast 
+										</label>
+										<div class='inline'>
+											<span id='camera_results_0'> </span> 
+											<div id='camera_ind_0' style='display:none;visibility:hidden'><img src='indicator_medium.gif' /></div>
+											<span id="camera_0_more_info_detailed" ></span> 
+											<span id="camera_0_history" class="history_span"  ></span>
+											<div> </div>
+										</div>
+											
+										<label> 
+											<input type="checkbox" name="camera_item" value="1" onclick="show_estimate(this, 15,'camera_results_1');" /> 
+											US West Coast 
+										</label>
+										<div class='inline'>
+											<span id='camera_results_1'></span> 
+											<div id='camera_ind_1' style='display:none;visibility:hidden'><img src='indicator_medium.gif' /></div>
+											<span id="camera_1_more_info_detailed" ></span>
+											<span id="camera_1_history" class="history_span"  ></span>
+											<div> </div>
+										</div>
+											
+										<label> 
+											<input type="checkbox" name="camera_item" value="2" onclick="show_estimate(this, 15,'camera_results_2');" /> 
+											Europe 
+										</label>
+										<div class='inline'>
+											<span id='camera_results_2'> </span> 
+											<div id='camera_ind_2' style='display:none;visibility:hidden'> <img src='indicator_medium.gif' /></div> 
+											<span id="camera_2_more_info_detailed" ></span>
+											<span id="camera_2_history" class="history_span"  ></span>
+											<div> </div>
+										</div>
+											
+								</div>
 							</div>
+					</div>
+					<br />
+					<div id='voice_conference'>
+						<input type="checkbox" name="voip_title" value="voip" onClick="select_all_items('voip');toggle_div(this, 'voip_sites_list');" />
+						<b>Voice Conference</b>
+						<br />
+						<div id="voip_sites_list" style="display:none; visibility: hidden;">
+							<div id="voip_locations"> 
 								
-							<label> 
-								<input type="checkbox" name="voip_item" value="1" onclick="show_estimate(this, 60, 'voip_results_1');" /> 
-								US West Coast 
-							</label> 
-							<div class='inline'>
-								<span id='voip_results_1'> </span> 
-								<span id="voip_1_more_info_detailed"></span>
-								<span id="voip_1_history" class="history_span"  ></span>								
-								<div> </div>
-							</div>
-							
-							<label> 
-								<input type="checkbox" name="voip_item" value="2" onclick="show_estimate(this, 60,'voip_results_2');" /> 
-								Europe 
-							</label> 
-							<div class='inline'>
-								<span id='voip_results_2'> </span> 
-								<span id="voip_2_more_info_detailed"></span> 
-								<span id="voip_2_history" class="history_span"  ></span>
-								<div> </div>
-							</div>	
-						</div>			
+								<label> 
+									<input type="checkbox" name="voip_item" value="0" onclick="show_estimate(this, 60,'voip_results_0');" id='voip_us_checkbox' /> 
+									US East Coast 
+								</label> 
+								<div class='inline'>
+									<span id='voip_results_0'> </span> 
+									<span id="voip_0_more_info_detailed" ></span> 
+									<span id="voip_0_history" class="history_span"  ></span>								
+									<div> </div>
+								</div>
+									
+								<label> 
+									<input type="checkbox" name="voip_item" value="1" onclick="show_estimate(this, 60, 'voip_results_1');" /> 
+									US West Coast 
+								</label> 
+								<div class='inline'>
+									<span id='voip_results_1'> </span> 
+									<span id="voip_1_more_info_detailed"></span>
+									<span id="voip_1_history" class="history_span"  ></span>								
+									<div> </div>
+								</div>
+								
+								<label> 
+									<input type="checkbox" name="voip_item" value="2" onclick="show_estimate(this, 60,'voip_results_2');" /> 
+									Europe 
+								</label> 
+								<div class='inline'>
+									<span id='voip_results_2'> </span> 
+									<span id="voip_2_more_info_detailed"></span> 
+									<span id="voip_2_history" class="history_span"  ></span>
+									<div> </div>
+								</div>	
+							</div>		
+						</div>
 					</div>
 										
 				</td> </tr>
-				<tr>
-					<td colspan='2' class='centered'>
-							
-						<hr >	
-						<div style='padding-top: 10px; padding-bottom: 10px;'>							
+				
+				<tr> <td colspan=2>
+				<hr />
+				<div id="survey_1" style='background-color: #DADADA;'>												
+					<table class='survey_table'>	
+						<tr>
+							<tr>
+								<td colspan='2' style='font-weight: bold; text-align: center;'>
+									Filling in your connection settings will let you compare your results to users similar to you:
+								</td>								
+							</tr>
+							<td>
+								What type of Internet connection do you have?
+							</td>
+							<td>
+								<label> <input type="radio" name="connection_type" value="dial_up" /> Dial-up </label>
+								<label> <input type="radio" name="connection_type" value="dsl" /> DSL </label>
+								<label> <input type="radio" name="connection_type" value="cable" /> Cable </label>
+								<label> <input type="radio" name="connection_type" value="fiber" /> Fiber </label>
+								<label> <input type="radio" name="connection_type" value="business" /> Business </label>
+								<label> <input type="radio" name="connection_type" value="other" /> Other </label>
+								<label> <input type="radio" name="connection_type" value="dont_know" /> Don't know </label>
+										<input type="radio" name="connection_type" value="not_selected" checked style="display:none"  />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								How are you accessing Internet?
+							</td>
+							<td>
+								<label> <input type="radio" name="connection_access" value="wireless" /> Wireless </label>
+								<label> <input type="radio" name="connection_access" value="wired" /> Wired	</label>
+								<label> <input type="radio" name="connection_access" value="dont_know" /> Don't know </label>
+										<input type="radio" name="connection_access" value="not_selected" checked  style="display:none" />
+								
+							</td>
+						</tr>	
+						<tr>
+							<td>
+								Where are you accessing Internet?
+							</td>
+							<td>
+								<label> <input type="radio" name="connection_location" value="home" /> Home </label>
+								<label> <input type="radio" name="connection_location" value="work" /> Work </label>	
+								<label> <input type="radio" name="connection_location" value="school" /> School </label>
+								<label> <input type="radio" name="connection_location" value="public" /> Public location </label>
+								<label> <input type="radio" name="connection_location" value="other" /> Other </label>
+								<label> <input type="radio" name="connection_location" value="dont_know" /> Don't know </label>
+										<input type="radio" name="connection_location" value="not_selected" checked style="display:none"  />
+							</td>
+						</tr>	
+					</table>
+					<br />
+				</div>
+				<hr />
+				<div style='padding-top: 10px; padding-bottom: 10px;'>							
 							<table align='center' style='text-align:center;'>
 							<tr>
 								<td>
-									<input type="button" style='font-weight: bold;' id="measurements_button" value="Perform All Measurements" onclick="change_tab('Results'); scroll(0, 0); get_all_information(false);" />
+									<input type="button" style='font-weight: bold;' id="measurements_button" value="Perform All Measurements" onclick="build_results_page(); change_tab('Results'); scroll(0, 0); get_all_information(false);" />
 								</td>
 								<td>
 									<input type="button" value="See Results for All Users with Same Connection Settings" onclick="get_user_stats('similar');" />
@@ -927,10 +953,7 @@ function select_all_items(item_prefix){
 						<div style="display:none; visibility: hidden;">
 							<input type="button" id="stop_button" value="Stop Measurements" onclick="stop_measurements();" />
 						</div>
-						<hr />									
-					</td>
-				</tr>				
-				<tr> <td colspan=2>				
+				<hr />
 				<div id="survey_2" align='left'>
 				    In terms of future work, are you interested in the performance of any of the other applications below? <br /> <br />
 					<label> <input type="checkbox" name="additional_activity" value="audio" /> Music Streaming (ex. Pandora) </label> <br />
@@ -1010,9 +1033,13 @@ function select_all_items(item_prefix){
 					<h4>Videos</h4>
 					<hr />
 				</div>
-				<p align='center'>
-					Videos go here
-				</p>
+				<div align='center'>
+					<object width="560" height="315">
+						<param name="movie" value="http://www.youtube.com/v/o-zTuIVUEiw?hl=en_US&amp;version=3"></param>
+						<param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param>
+						<embed src="http://www.youtube.com/v/o-zTuIVUEiw?hl=en_US&amp;version=3" type="application/x-shockwave-flash" width="560" height="315" allowscriptaccess="always" allowfullscreen="true"></embed>
+					</object>
+				</div>
 			</div>
 		</p>
 	 </div>
@@ -1026,34 +1053,28 @@ function select_all_items(item_prefix){
 					<h4>Results</h4>
 					<hr />
 				</div>
-				<table align="center" border="1px" cellpadding="5px">
-					<tr>
-						<td>
-							CNN
-						</td>
-						<td>
-							<div class='inline'> 
-								<span id="cnn_results"> </span>
-								<span id="cnn_more_info_detailed"  ></span>
-								<span id="cnn_history" class="history_span" ></span>
-								<div> </div>
-							</div>
-						</td>
-					</tr>
-					<tr>
-					<td>
-					Lost Angeles Times
-					</td>
-						<td>
-							<div class='inline'>
+				
+				<div id='results_page'>
+					<div id='cnn_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<label>CNN</label>
+						<div class='inline'> 
+									<span id="cnn_results"> </span>
+									<span id="cnn_more_info_detailed"  ></span>
+									<span id="cnn_history" class="history_span" ></span>
+							<div> </div>
+						</div>
+					</div>
+					
+					<div id='la_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<label>Los Angeles Times</label>
+						<div class='inline'>
 								<span id="la_results"> </span>
 								<span id="la_more_info_detailed"  ></span>
 								<span id="la_history" class="history_span" ></span>
-								<div> </div>
-							</div>
-						</td>
-					</tr>
-				</table>
+							<div> </div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</p>
 	 </div>

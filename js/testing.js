@@ -47,6 +47,34 @@ var dots_in_tests_title = 0; // Used for test tab running indicator;
 var test_tab_running_indicator_timer = null;
 last_output_text = {};
 
+function build_results_page(){
+
+	// Hide everything to start
+	
+	var results_divs = document.getElementsByName("results_page")[0].childNodes;
+	for(var i=0;i<results_divs.length;i++){
+		results_divs[i].style.visibility='hidden';
+		results_divs[i].style.display='none';
+	}
+	
+
+	// Reveal results only for what we testsed for
+	for (i in activities_list) {
+		string = activities_list[i] + "_item";
+		//this_group_tasks = document.getElementsByName(string);
+		this_group_tasks = getElementsByName_iefix("input", string);
+		for (j in this_group_tasks) {
+			this_checkbox = this_group_tasks[j];				
+			if (this_checkbox.checked) {
+				document.getElementById(this_checkbox.value+'_results_div').style.visibility='visible';
+				document.getElementById(this_checkbox.value+'_results_div').style.display='block';
+				//alert(activities_list[i]);
+				//alert(this_checkbox.value);			
+			}
+		}
+	}
+}
+
 // Getting all activities selected
 function get_all_information(auto_testing) {
 	if ((!auto_testing) && (!total_estimated_time))

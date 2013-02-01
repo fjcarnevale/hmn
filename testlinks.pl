@@ -33,7 +33,10 @@ foreach my $key(sort keys %json_hash){
 	}
 }
 
+# Exit here if none of the links failed
+die "All links succeeded\n" unless keys %failed;
 
+#Otherwise print the failed links and send an email
 my $message = "The following links failed\n";
 
 foreach my $key(keys %failed){
