@@ -21,7 +21,7 @@ function show_estimate(element, time, id) {
 	if (!id)
 		id = element.value + "_results";
 	results_element = document.getElementById(id); 
-	
+
 	// We don't display estimate if there is rating from previous run displayed
 	if (results_element.innerHTML.match(/star.gif/))
 		return;

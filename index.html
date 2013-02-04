@@ -7,6 +7,7 @@
 <meta name="keywords" content="home, network, measurements" />
 <title> How's My Network </title>	
 
+
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/jquery-json.js"></script>
 <script type="text/javascript" src="js/tabber.js"></script>
@@ -17,6 +18,7 @@
 <script type="text/javascript" src="js/display_functions.js"></script>
 <script type="text/javascript" src="js/highcharts.js"></script>
 <script type="text/javascript" src="js/objects.json"></script>
+<script type="text/javascript" src="js/speedTest.js"></script>
 
 		
 <link rel="stylesheet" href="css/example.css" TYPE="text/css" MEDIA="screen">
@@ -38,52 +40,52 @@ objectData = data;
 
 document.write('<style type="text/css">.tabber{display:none;}<\/style>');
 
-		var network_wait = false; // Variable used so that we do not download two files at once (unless we are doing parallel download)
-		var web_file_root = "./files/";
+var network_wait = false; // Variable used so that we do not download two files at once (unless we are doing parallel download)
+var web_file_root = "./files/";
 
-		// Code from https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/filter
-		// Function used for filtering numbers from array (exclude nulls)
-		if (!Array.prototype.filter)
-		{
-		  Array.prototype.filter = function(fun)
-		  {
-			"use strict";
+// Code from https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/filter
+// Function used for filtering numbers from array (exclude nulls)
+if (!Array.prototype.filter)
+{
+  Array.prototype.filter = function(fun)
+  {
+	"use strict";
 
-			if (this === void 0 || this === null)
-			  throw new TypeError();
+	if (this === void 0 || this === null)
+	  throw new TypeError();
 
-			var t = Object(this);
-			var len = t.length >>> 0;
-			if (typeof fun !== "function")
-			  throw new TypeError();
+	var t = Object(this);
+	var len = t.length >>> 0;
+	if (typeof fun !== "function")
+	  throw new TypeError();
 
-			var res = [];
-			var thisp = arguments[1];
-			for (var i = 0; i < len; i++)
-			{
-			  if (i in t)
-			  {
-				var val = t[i]; // in case fun mutates this
-				if (fun.call(thisp, val, i, t))
-				  res.push(val);
-			  }
-			}
+	var res = [];
+	var thisp = arguments[1];
+	for (var i = 0; i < len; i++)
+	{
+	  if (i in t)
+	  {
+		var val = t[i]; // in case fun mutates this
+		if (fun.call(thisp, val, i, t))
+		  res.push(val);
+	  }
+	}
 
-			return res;
-		  };
+	return res;
+  };
+}
+
+// Text to load in each div of class footer (this text goes on every page so we only change it here)
+$(window).load(function() { 		
+	$(".footer").each(
+		function(){
+			this.innerHTML = "<hr />How's My Network | Worcester Polytechnic Institute | <a href='mailto: hmn@cs.wpi.edu'>  hmn@cs.wpi.edu </a>"
+							+ "<br /> <br />This material is based upon work supported by the National Science Foundation under Grant No. 0959441."
+							+ " Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) "
+							+ "and do not necessarily reflect the views of the National Science Foundation.";
 		}
-		
-		// Text to load in each div of class footer (this text goes on every page so we only change it here)
-		$(window).load(function() { 		
-			$(".footer").each(
-				function(){
-					this.innerHTML = "<hr />How's My Network | Worcester Polytechnic Institute | <a href='mailto: hmn@cs.wpi.edu'>  hmn@cs.wpi.edu </a>"
-									+ "<br /> <br />This material is based upon work supported by the National Science Foundation under Grant No. 0959441."
-									+ " Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) "
-									+ "and do not necessarily reflect the views of the National Science Foundation.";
-				}
-			);					
-		});	
+	);					
+});	
 		   
 function select_all_items(item_prefix){
 	var news_items = document.getElementsByName(item_prefix+'_item');
@@ -91,16 +93,19 @@ function select_all_items(item_prefix){
 		news_items[i].click();
 	}
 }
+
+
 </script>
+
 <style type="text/css">
-		.popBoxClass {
-			position: absolute;
-			z-index: 2;
-			background: #cccccc;
-			width: 100% - 20;
-			padding: 0.3em;
-			border: 1px solid gray;
-		}
+.popBoxClass {
+	position: absolute;
+	z-index: 2;
+	background: #cccccc;
+	width: 100% - 20;
+	padding: 0.3em;
+	border: 1px solid gray;
+}
 		
 </style>
 </head>
@@ -608,6 +613,13 @@ function select_all_items(item_prefix){
 							</div>
 						</div>
 					</div>
+					<br />
+					<div id="network_performance"> 
+						<input type="checkbox" name="network_performance" id="network_performance" value="network"/>
+						<b>Network Performance</b>
+						<br />
+						(Throughput/Round Trip/Jitter)
+					</div>
 				</td>
 				<td class='half'>				
 					
@@ -1044,6 +1056,55 @@ function select_all_items(item_prefix){
 		</p>
 	 </div>
 
+	 <!-- Graphs Tab -->
+	 <div class="tabbertab">
+		<h2>Graphs</h2>
+		<p>
+			<div class="entire_page">
+				<div align='center'>
+					<h4>Graphs</h4>
+					<hr />
+				</div>
+					<div style="text-align: center; min-width: 560px; padding: 5px 20px 15px 20px;">
+
+				<div style="border-radius: 10px; border: 3px solid #222222; background: #cccccc;">
+					<h2 style="font-size: 28px; font-family: chiller; padding: 10px 10px; margin: 0px 0px 0px 0px; background: #222222; color: white;">&lt;o@0|&nbsp; Test Results &nbsp;|0@o&gt;</h2>
+
+					<div style="margin: 25px;">
+					
+						<div style="background: gray; border-radius: 6px;">
+							<div id="graph_Throughput" style="height: 274px; background: #000000; border-radius: 6px;"></div>
+							<p style="margin: 0; padding: 5px; font-family: 'Microsoft Tai Le';">
+								Throughput reflects how fast your network can download data.
+							</p>
+						</div>
+						
+						<div style="background: gray; border-radius: 6px;">
+							<div id="graph_RTT" style="height: 274px; margin-top: 25px; background: #000000; border-radius: 6px;"></div>
+							<p style="margin: 0; padding: 5px; font-family: 'Microsoft Tai Le';">
+								Round Trip Time (RTT) reflects the time it takes<br />
+								for your network to communicate with other servers.
+							</p>
+						</div>
+							
+						<div style="background: gray; border-radius: 6px;">
+							<div id="graph_Jitter" style="height: 274px; margin-top: 25px; background: #000000; border-radius: 6px;"></div>
+							<p style="margin: 0; padding: 5px; font-family: 'Microsoft Tai Le';">
+								Jitter, measured by Coefficient of Variation (the standard deviation divided<br />
+								 by the mean) of the Round Trip Times, reflects the instability of the RTTs.<br />
+								A large value means that each RTT varies greatly.
+							</p>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+
+			</div>
+		</p>
+	 </div>
+	 
 	  <!-- 'Results' Tab -->
 	 <div class="tabbertab">
 		<h2>Results</h2>

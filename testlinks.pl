@@ -3,6 +3,7 @@ use LWP::Simple;
 use FindBin qw($Bin);
 use lib "$Bin/JSON-2.53/lib/";
 use JSON;
+use bytes;
 use strict;
 use warnings;
 
@@ -22,6 +23,8 @@ my %failed = ();
 foreach my $key(sort keys %json_hash){
 	printf("Testing: %-32s",$key);
 	my $obj = get( $json_hash{$key}{'link'} );
+
+
 	# Try to get the object via HTTP request
 	if(!defined $obj 
 		&& !open($obj,"<",$local_file_path.$json_hash{$key}{'link'})
@@ -29,7 +32,7 @@ foreach my $key(sort keys %json_hash){
 			print "Failure\n";
 			$failed{$key} = $json_hash{$key}{'link'};
 	}else{
-		print "Success\n";
+		print "Success, Size: ",length($obj),"\n";
 	}
 }
 

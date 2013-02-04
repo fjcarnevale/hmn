@@ -50,8 +50,7 @@ last_output_text = {};
 function build_results_page(){
 
 	// Hide everything to start
-	
-	var results_divs = document.getElementsByName("results_page")[0].childNodes;
+	var results_divs = document.getElementById("results_page").children;
 	for(var i=0;i<results_divs.length;i++){
 		results_divs[i].style.visibility='hidden';
 		results_divs[i].style.display='none';
@@ -79,18 +78,19 @@ function build_results_page(){
 function get_all_information(auto_testing) {
 	if ((!auto_testing) && (!total_estimated_time))
 		return;
-	
+
 	if (test_running) {
 		if (periodic_test_timer)
 			clearTimeout(periodic_test_timer);
 		periodic_test_timer = setTimeout(function() {get_all_information(true);}, 1000 * 60 * interval_between_tests);
 		return;
 	}
+
 	test_running = true;
 	indicate_test_tab_running(); // Show tab title when running
 	automatic_testing = auto_testing;
 	session_testing_number++;
-	
+
 	if (periodic_test_timer)
 		clearTimeout(periodic_test_timer);
 		
@@ -108,7 +108,6 @@ function get_all_information(auto_testing) {
 	for (var i = 0; i < spans.length; i++) {
 		spans[i].innerHTML = "";
 	}	
-	
 	// Create list of all tasks
 	tasks_array = new Array();
 	// Add tasks
@@ -126,7 +125,6 @@ function get_all_information(auto_testing) {
 			}
 		}
 	}
-	
 	process_remaining_tasks(); // Start dequeueing tasks
 }
 
@@ -176,6 +174,7 @@ function process_remaining_tasks() {
 
 
 function start_testing(test_par, test_type_par) {
+
 	// Initial Setup
 	test = test_par;
 	test_type = test_type_par;
@@ -224,6 +223,7 @@ function start_testing(test_par, test_type_par) {
 // add_test is a function that is called from jsFunctions.js after measurement is done
 // It contains size and measurement of the file downloaded
 function add_test(size, measurement) { // example: add_test(55000, 213)
+
 	if (!test_running)
 		return; // Bug in IE and Chrome, add_test() executed after everything is done sometimes
 	if (test != null) {
