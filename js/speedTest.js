@@ -470,7 +470,7 @@ function TrunTest()
 document.onready = function()
 {
 	drawGraph();
-	TrunTest();
+	//TrunTest();
 }
 
 var chart_Throughput;
