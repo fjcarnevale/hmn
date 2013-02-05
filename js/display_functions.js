@@ -19,7 +19,7 @@ function show_estimate(element, time, id) {
 	click_default_checkboxes = false;
 	display_total_estimate(total_estimated_time);
 	if (!id)
-		id = element.value + "_results";
+		id = element.value + "_estimate";
 	results_element = document.getElementById(id); 
 
 	// We don't display estimate if there is rating from previous run displayed

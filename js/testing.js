@@ -52,8 +52,10 @@ function build_results_page(){
 	// Hide everything to start
 	var results_divs = document.getElementById("results_page").children;
 	for(var i=0;i<results_divs.length;i++){
+		if(results_divs[i].name !== undefined && results_divs[i].name=='results_div'){
 		results_divs[i].style.visibility='hidden';
 		results_divs[i].style.display='none';
+		}
 	}
 	
 

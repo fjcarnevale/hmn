@@ -48,7 +48,7 @@ foreach my $key(keys %failed){
 
 print $message;
 
-sendEmail($to_email,"hmn\@cs.wpi.edu","HMN Link Failures",$message);
+#sendEmail($to_email,"hmn\@cs.wpi.edu","HMN Link Failures",$message);
 
 sub sendEmail{
 

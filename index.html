@@ -352,144 +352,93 @@ function select_all_items(item_prefix){
 								<input type="checkbox" name="news_item" value="cnn" onClick="show_estimate(this, 5);" id='cnn_checkbox' /> 
 								CNN 
 							</label> 
-							<br />
-							<!--
-							<div class='inline'> 
-								<span id="cnn_results"> </span>
-								<span id="cnn_more_info_detailed"  ></span>
-								<span id="cnn_history" class="history_span" ></span>
-								<div> </div>
+							<div class='inline'>
+								<span id="cnn_estimate"></span>
 							</div>
-							-->
-							
+							<br />			
 										
 							<label> 
 								<input type="checkbox" name="news_item" value="la" onclick="show_estimate(this, 5);"  /> 
 								 Los Angeles Times  
 							</label>
-							<br />
-							<!--
 							<div class='inline'>
-								<span id="la_results"> </span>
-								<span id="la_more_info_detailed"  ></span>
-								<span id="la_history" class="history_span" ></span>
-								<div> </div>
+								<span id="la_estimate"></span>
 							</div>
-							-->
-							
+							<br />
+
 							
 							<label> 
 								<input type="checkbox" name="news_item" value="msn" onclick="show_estimate(this, 5);"  /> 
 								 MSNBC  
 							</label>
-							<br />
-							<!--
 							<div class='inline'>
-								<span id="msn_results"> </span> 
-								<span id="msn_more_info_detailed"  ></span>
-								<span id="msn_history" class="history_span"  ></span>
-								<div> </div>
-							</div>		
-							-->
+								<span id="msn_estimate"></span>
+							</div>
+							<br />
 							
 							<label> 
 								<input type="checkbox" name="news_item" value="ny" onclick="show_estimate(this, 5);"  /> 
 								 New York Times  
 							</label>
-							<br />
-							<!--
 							<div class='inline'>
-								<span id="ny_results"> </span>
-								<span id="ny_more_info_detailed"  ></span>
-								<span id="ny_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="ny_estimate"></span>
 							</div>
-							-->
+							<br />
 							
 							<label> 
 								<input type="checkbox" name="news_item" value="wp" onclick="show_estimate(this, 5);"  /> 
 								 Washington Post  
 							</label>
-							<br />
-							<!--
 							<div class='inline'>
-								<span id="wp_results"> </span> 
-								<span id="wp_more_info_detailed"  ></span>
-								<span id="wp_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="wp_estimate"></span>
 							</div>
-							-->
+							<br />
 							
 							
 							<label> 
 								<input type="checkbox" name="news_item" value="abc" onclick="show_estimate(this, 5);"  /> 
 								 ABC News  
 							</label>
-							<br />
-							<!--
 							<div class='inline'>
-								<span id="abc_results"> </span> 
-								<span id="abc_more_info_detailed"  ></span>
-								<span id="abc_history" class="history_span"  ></span>
-								<div> </div>
-							</div>						
-							-->
-							
+								<span id="abc_estimate"></span>
+							</div>
+							<br />
+
 							<label> 
 								<input type="checkbox" name="news_item" value="ru" onclick="show_estimate(this, 5);"  /> 
 								Reuters  
 							</label>
-							<br />
-							<!--
 							<div class='inline'>
-								<span id="ru_results"> </span> 
-								<span id="ru_more_info_detailed"  ></span>
-								<span id="ru_history" class="history_span"  ></span>
-								<div> </div>
-							</div>						
-							-->
-							
+								<span id="ru_estimate"></span>
+							</div>
+							<br />
+
 							<label> 
 								<input type="checkbox" name="news_item" value="bbc" onclick="show_estimate(this, 5);"  /> 
 								BBC  
 							</label>
-							<br />
-							<!--
 							<div class='inline'>
-								<span id="bbc_results"> </span>
-								<span id="bbc_more_info_detailed"  ></span>
-								<span id="bbc_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="bbc_estimate"></span>
 							</div>
-							-->
+							<br />
 							
 							<label> 
 								<input type="checkbox" name="news_item" value="hp" onclick="show_estimate(this, 5);"  /> 
 								Huffington Post  
 							</label>
-							<br />
-							<!--
 							<div class='inline'>
-								<span id="hp_results"> </span> 
-								<span id="hp_more_info_detailed"  ></span>
-								<span id="hp_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="hp_estimate"></span>
 							</div>
-							-->
+							<br />
 							
 							<label> 
 								<input type="checkbox" name="news_item" value="ut" onclick="show_estimate(this, 5);"  /> 
 								USA Today  
 							</label>
-							<br />
-							<!--
 							<div class='inline'>
-								<span id="ut_results"> </span> 
-								<span id="ut_more_info_detailed"  ></span>
-								<span id="ut_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="ut_estimate"></span>
 							</div>
-							-->
+							<br />
 						</div>
 						
 					</div>
@@ -506,51 +455,46 @@ function select_all_items(item_prefix){
 								Facebook  
 							</label>
 							<div class='inline'>
-								<span id="fb_results"> </span>
-								<span id="fb_more_info_detailed" ></span>
-								<span id="fb_history" class="history_span"  ></span>
-								<div></div>
+								<span id="fb_estimate"></span>
 							</div>
+							<br />	
+							
 							<label> 
 								<input type="checkbox" name="social_item" value="tw" onclick="show_estimate(this, 5);" /> 
 								Twitter  
 							</label>
 							<div class='inline'>
-								<span id="tw_results"> </span>
-								<span id="tw_more_info_detailed" ></span>
-								<span id="tw_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="tw_estimate"></span>
 							</div>
+							<br />	
+							
 							<label> 
 								<input type="checkbox" name="social_item" value="ms" onclick="show_estimate(this, 5);"  /> 
 								MySpace  
 							</label>
 							<div class='inline'>
-								<span id="ms_results"> </span> 
-								<span id="ms_more_info_detailed" ></span>
-								<span id="ms_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="ms_estimate"></span>
 							</div>
+							<br />	
+							
 							<label> 
 								<input type="checkbox" name="social_item" value="fr" onclick="show_estimate(this, 5);"  /> 
 								Friendster
 							</label>
 							<div class='inline'>
-								<span id="fr_results"> </span>
-								<span id="fr_more_info_detailed" ></span>
-								<span id="fr_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="fr_estimate"></span>
 							</div>
+							<br />	
+							
 							<label> 
 								<input type="checkbox" name="social_item" value="ld" onclick="show_estimate(this, 5);"  /> 
 								LinkedIn  
 							</label>
 							<div class='inline'>
-								<span id="ld_results"> </span> 
-								<span id="ld_more_info_detailed" ></span>
-								<span id="ld_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="ld_estimate"></span>
 							</div>
+							<br />	
+							
 						</div>
 					</div>
 					
@@ -566,51 +510,46 @@ function select_all_items(item_prefix){
 								Ebay 
 							</label> 
 							<div class='inline'>
-								<span id="eb_results"> </span>
-								<span id="eb_more_info_detailed" ></span>
-								<span id="eb_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="eb_estimate"></span>
 							</div>
+							<br />
+							
 							<label>
 								<input type="checkbox" name="shopping_item" value="az" onclick="show_estimate(this, 5);"  /> 
 								Amazon
 							</label>
 							<div class='inline'>
-								<span id="az_results"> </span>
-								<span id="az_more_info_detailed" ></span>
-								<span id="az_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="az_estimate"></span>
 							</div>
+							<br />
+							
 							<label> 
 								<input type="checkbox" name="shopping_item" value="br" onclick="show_estimate(this, 5);"  /> 
 								Bizrate 
 							</label> 
 							<div class='inline'>
-								<span id="br_results"> </span> 
-								<span id="br_more_info_detailed" ></span>
-								<span id="br_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="br_estimate"></span>
 							</div>
+							<br />
+							
 							<label> 
 								<input type="checkbox" name="shopping_item" value="gt" onclick="show_estimate(this, 5);"  /> 
 								Giftag 
 							</label> 
 							<div class='inline'>
-								<span id="gt_results"> </span>
-								<span id="gt_more_info_detailed" ></span>
-								<span id="gt_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="gt_estimate"></span>
 							</div>
+							<br />
+							
 							<label> 
 								<input type="checkbox" name="shopping_item" value="sb" onclick="show_estimate(this, 5);"  /> 
 								 Smartbargains 
 							</label> 
 							<div class='inline'>
-								<span id="sb_results"> </span> 
-								<span id="sb_more_info_detailed" ></span>
-								<span id="sb_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="sb_estimate"></span>
 							</div>
+							<br />
+							
 						</div>
 					</div>
 					<br />
@@ -1116,25 +1055,370 @@ function select_all_items(item_prefix){
 				</div>
 				
 				<div id='results_page'>
+					<h4>News</h4>
+					
 					<div id='cnn_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
 						<label>CNN</label>
-						<div class='inline'> 
-									<span id="cnn_results"> </span>
-									<span id="cnn_more_info_detailed"  ></span>
-									<span id="cnn_history" class="history_span" ></span>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id="cnn_results"> </span>
+								<span id="cnn_more_info_detailed"  ></span>
+								<span id="cnn_history" class="history_span" ></span>
 							<div> </div>
 						</div>
+						</td>
+						</tr>
+						</table>
 					</div>
 					
 					<div id='la_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<label>Los Angeles Times</label>
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>Lost Angeles Times</label>
+						</td>
+						<td align='right'>
 						<div class='inline'>
 								<span id="la_results"> </span>
 								<span id="la_more_info_detailed"  ></span>
 								<span id="la_history" class="history_span" ></span>
 							<div> </div>
 						</div>
+						</td>
+						</tr>
+						</table>
 					</div>
+					
+					<div id='msn_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>MSN</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id="msn_results"> </span>
+								<span id="msn_more_info_detailed"  ></span>
+								<span id="msn_history" class="history_span" ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id="ny_results_div" name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>New York Times</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id="ny_results"> </span>
+								<span id="ny_more_info_detailed"  ></span>
+								<span id="ny_history" class="history_span" ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='wp_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>Washington Post</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id="wp_results"> </span>
+								<span id="wp_more_info_detailed"  ></span>
+								<span id="wp_history" class="history_span" ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='abc_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>ABC News</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id="abc_results"> </span>
+								<span id="abc_more_info_detailed"  ></span>
+								<span id="abc_history" class="history_span" ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='ru_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>Reuters</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id="ru_results"> </span>
+								<span id="ru_more_info_detailed"  ></span>
+								<span id="ru_history" class="history_span" ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='bbc_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>BBC</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id="bbc_results"> </span>
+								<span id="bbc_more_info_detailed"  ></span>
+								<span id="bbc_history" class="history_span" ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='hp_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>Huffington Post</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id="hp_results"> </span>
+								<span id="hp_more_info_detailed"  ></span>
+								<span id="hp_history" class="history_span" ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='ut_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>USA Today</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id="ut_results"> </span>
+								<span id="ut_more_info_detailed"  ></span>
+								<span id="ut_history" class="history_span" ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<h4>Social</h4>
+					<div id='fb_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>Facebook</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id="fb_results"> </span>
+							<span id="fb_more_info_detailed" ></span>
+							<span id="fb_history" class="history_span"  ></span>
+							<div></div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='tw_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>Twitter</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id="tw_results"> </span>
+							<span id="tw_more_info_detailed" ></span>
+							<span id="tw_history" class="history_span"  ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='ms_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>MySpace</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id="ms_results"> </span> 
+							<span id="ms_more_info_detailed" ></span>
+							<span id="ms_history" class="history_span"  ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='fr_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>Friendster</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id="fr_results"> </span>
+							<span id="fr_more_info_detailed" ></span>
+							<span id="fr_history" class="history_span"  ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='ld_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>LinkedIn</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id="ld_results"> </span> 
+							<span id="ld_more_info_detailed" ></span>
+							<span id="ld_history" class="history_span"  ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<h4>Shopping</h4>
+					<div id='eb_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>Ebay</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id="eb_results"> </span>
+							<span id="eb_more_info_detailed" ></span>
+							<span id="eb_history" class="history_span"  ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='az_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>Amazon</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id="az_results"> </span>
+							<span id="az_more_info_detailed" ></span>
+							<span id="az_history" class="history_span"  ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='br_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>Bizrate</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id="br_results"> </span> 
+							<span id="br_more_info_detailed" ></span>
+							<span id="br_history" class="history_span"  ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='gt_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>Giftag</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id="gt_results"> </span>
+							<span id="gt_more_info_detailed" ></span>
+							<span id="gt_history" class="history_span"  ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='sb_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='50%'>
+						<tr>
+						<td>
+						<label>Smartbargains</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id="sb_results"> </span> 
+							<span id="sb_more_info_detailed" ></span>
+							<span id="sb_history" class="history_span"  ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
 				</div>
 			</div>
 		</p>

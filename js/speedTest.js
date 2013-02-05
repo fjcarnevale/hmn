@@ -360,7 +360,7 @@ function TtestRTT()
 		else
 		{
 			TlCounter = 0;
-			TsendResults();
+			//TsendResults();
 		}
 	}
 }
