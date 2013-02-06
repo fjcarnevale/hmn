@@ -67,6 +67,7 @@ function build_results_page(){
 		for (j in this_group_tasks) {
 			this_checkbox = this_group_tasks[j];				
 			if (this_checkbox.checked) {
+				alert(this_checkbox.value);
 				document.getElementById(this_checkbox.value+'_results_div').style.visibility='visible';
 				document.getElementById(this_checkbox.value+'_results_div').style.display='block';
 				//alert(activities_list[i]);

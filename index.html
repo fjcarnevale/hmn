@@ -88,9 +88,9 @@ $(window).load(function() {
 });	
 		   
 function select_all_items(item_prefix){
-	var news_items = document.getElementsByName(item_prefix+'_item');
+	var items = document.getElementsByName(item_prefix+'_item');
 	for(var i=0;i<news_items.length;i++){
-		news_items[i].click();
+		items[i].click();
 	}
 }
 
@@ -572,13 +572,7 @@ function select_all_items(item_prefix){
 					</label> 
 					<br />
 					<div class='inline'>
-						<span id='file_hosting_results'> </span> 
-						<div id='file_hosting_indicator' style='display:none;visibility:hidden'>
-							<img src='indicator_medium.gif' />
-						</div> 
-						<span id="file_hosting_results_more_info_detailed"></span>  
-						<span id="file_hosting_history" class="history_span"> </span>
-						<div> </div>
+						<span id="file_hosting_estimate"></span>
 					</div>
 					<br />
 					<input type="checkbox" name="game_title" value="games" onClick="select_all_items('game');toggle_div(this, 'game_sites_list');" />
@@ -1069,7 +1063,7 @@ function select_all_items(item_prefix){
 					<h4>News</h4>
 					
 					<div id='cnn_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>CNN</label>
@@ -1087,7 +1081,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='la_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>Lost Angeles Times</label>
@@ -1105,7 +1099,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='msn_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>MSN</label>
@@ -1123,7 +1117,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id="ny_results_div" name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>New York Times</label>
@@ -1141,7 +1135,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='wp_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>Washington Post</label>
@@ -1159,7 +1153,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='abc_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>ABC News</label>
@@ -1177,7 +1171,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='ru_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>Reuters</label>
@@ -1195,7 +1189,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='bbc_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>BBC</label>
@@ -1213,7 +1207,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='hp_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>Huffington Post</label>
@@ -1231,7 +1225,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='ut_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>USA Today</label>
@@ -1250,7 +1244,7 @@ function select_all_items(item_prefix){
 					
 					<h4>Social</h4>
 					<div id='fb_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>Facebook</label>
@@ -1268,7 +1262,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='tw_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>Twitter</label>
@@ -1286,7 +1280,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='ms_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>MySpace</label>
@@ -1304,7 +1298,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='fr_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>Friendster</label>
@@ -1322,7 +1316,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='ld_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>LinkedIn</label>
@@ -1341,7 +1335,7 @@ function select_all_items(item_prefix){
 					
 					<h4>Shopping</h4>
 					<div id='eb_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>Ebay</label>
@@ -1359,7 +1353,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='az_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>Amazon</label>
@@ -1377,7 +1371,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='br_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>Bizrate</label>
@@ -1395,7 +1389,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='gt_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>Giftag</label>
@@ -1413,7 +1407,7 @@ function select_all_items(item_prefix){
 					</div>
 					
 					<div id='sb_results_div' name="results_div" style="display:none; visibility: hidden;">
-						<table width='50%'>
+						<table width='75%'>
 						<tr>
 						<td>
 						<label>Smartbargains</label>
@@ -1430,6 +1424,133 @@ function select_all_items(item_prefix){
 						</table>
 					</div>
 					
+					<h4>File Hosting</h4>
+					<div id='file_hosting_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>File Hosting</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id="file_hosting_results"> </span>
+							<span id="file_hosting_more_info_detailed" ></span>
+							<span id="file_hosting_history" class="history_span"  ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<h4>Gaming</h4>
+					<div id='wow_us_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>Wow - US</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id='game_results_wow_us'> </span> 
+								<span id='game_results_wow_us_more_info_detailed'> </span> 
+								<span id="wow_us_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='wow_australia_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>Wow - Australia</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id='game_results_wow_australia'> </span> 
+								<span id='game_results_wow_australia_more_info_detailed'> </span> 
+								<span id="wow_australia_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='wow_europe_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>Wow - Europe</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id='game_results_wow_europe'> </span> 
+								<span id='game_results_wow_europe_more_info_detailed'> </span> 
+								<span id="wow_europe_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='wow_china_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>Wow - China</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id='game_results_wow_china'> </span> 
+								<span id='game_results_wow_china_more_info_detailed'> </span> 
+								<span id="wow_china_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='wow_taiwan_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>Wow - Taiwan</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id='game_results_wow_taiwan'> </span> 
+								<span id='game_results_wow_taiwan_more_info_detailed'> </span> 
+								<span id="wow_taiwan_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='wow_korea_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>Wow - Korea</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+								<span id='game_results_wow_korea'> </span> 
+								<span id='game_results_wow_korea_more_info_detailed'> </span> 
+								<span id="wow_korea_history" class="history_span"  ></span>
+								<div> </div>
+							</div>
+						</td>
+						</tr>
+						</table>
+					</div>
 				</div>
 			</div>
 		</p>
