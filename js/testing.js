@@ -69,9 +69,7 @@ function build_results_page(){
 			if (this_checkbox.checked) {
 				alert(this_checkbox.value);
 				document.getElementById(this_checkbox.value+'_results_div').style.visibility='visible';
-				document.getElementById(this_checkbox.value+'_results_div').style.display='block';
-				//alert(activities_list[i]);
-				//alert(this_checkbox.value);			
+				document.getElementById(this_checkbox.value+'_results_div').style.display='block';	
 			}
 		}
 	}

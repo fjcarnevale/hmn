@@ -86,11 +86,32 @@ $(window).load(function() {
 		}
 	);					
 });	
-		   
+	
+/*	
 function select_all_items(item_prefix){
 	var items = document.getElementsByName(item_prefix+'_item');
-	for(var i=0;i<news_items.length;i++){
+	for(var i=0;i<items.length;i++){
 		items[i].click();
+	}
+}
+*/
+
+function select_all_items(e){
+	var selected = e.checked;
+	var items = document.getElementsByName(e.value+'_item');
+
+	for(var i=0;i<items.length;i++){
+		if(selected){
+			items[i].click();
+		}else{
+			items[i].checked = selected;
+		}
+	}
+	
+	// Ugly way to do show this, but only way I see of doing it for now
+	if(e.value === 'game'){
+		document.getElementsByName('game_0')[0].click();
+		document.getElementsByName('game_1')[0].click();
 	}
 }
 
@@ -344,7 +365,7 @@ function select_all_items(item_prefix){
 				<tr>			
 				<td class='half'>				
 					<div id="news_sites"> 
-						<input type="checkbox" name="news_title" value="news" onClick="select_all_items('news');toggle_div(this, 'news_sites_list');" />
+						<input type="checkbox" name="news_title" value="news" onClick="select_all_items(this);toggle_div(this, 'news_sites_list');" />
 						<b>News</b>
 						<br />
 						<div id="news_sites_list" style="display:none; visibility: hidden;">
@@ -446,7 +467,7 @@ function select_all_items(item_prefix){
 					<br />
 					
 					<div id="social_sites"> 
-						<input type="checkbox" name="social_title" value="social" onClick="select_all_items('social');toggle_div(this, 'social_sites_list');" />
+						<input type="checkbox" name="social_title" value="social" onClick="select_all_items(this);toggle_div(this, 'social_sites_list');" />
 						<b>Social Networks</b>
 						<br />
 						<div id="social_sites_list" style="display:none; visibility: hidden;">
@@ -501,7 +522,7 @@ function select_all_items(item_prefix){
 					<br />
 					
 					<div id="shopping_sites"> 
-						<input type="checkbox" name="shopping_title" value="shopping" onClick="select_all_items('shopping');toggle_div(this, 'shopping_sites_list');" />
+						<input type="checkbox" name="shopping_title" value="shopping" onClick="select_all_items(this);toggle_div(this, 'shopping_sites_list');" />
 						<b>Shopping</b>
 						<br />
 						<div id="shopping_sites_list" style="display:none; visibility: hidden;">
@@ -562,8 +583,6 @@ function select_all_items(item_prefix){
 				</td>
 				<td class='half'>				
 					
-					<br />
-					
 					<label> 
 						<input type="checkbox" name="file_hosting_item" onclick="show_estimate(this, 15,'file_hosting_results');" value='file_hosting' />  
 						<b>
@@ -575,7 +594,7 @@ function select_all_items(item_prefix){
 						<span id="file_hosting_estimate"></span>
 					</div>
 					<br />
-					<input type="checkbox" name="game_title" value="games" onClick="select_all_items('game');toggle_div(this, 'game_sites_list');" />
+					<input type="checkbox" name="game_title" value="game" onClick="select_all_items(this);toggle_div(this, 'game_sites_list');" />
 					<b>Games</b>
 					<br />
 					<div id="game_sites_list" style="display:none; visibility: hidden;">
@@ -585,65 +604,54 @@ function select_all_items(item_prefix){
 						<div id="game_0_locations" style="display:none; visibility: hidden;">
 							<br /> 
 							<label>
-								<input type="checkbox" name="game_item" value="wow_us" onclick="show_estimate(this, 20,'game_results_wow_us');"  id='wow_us_checkbox'  /> 
+								<input type="checkbox" name="game_item" value="wow_us" onclick="show_estimate(this, 20);"  id='wow_us_checkbox'  /> 
 								US  
 							</label> 
 							<div class='inline'>
-								<span id='game_results_wow_us'> </span> 
-								<span id='game_results_wow_us_more_info_detailed'> </span> 
-								<span id="wow_us_history" class="history_span"  ></span>
-								<div> </div>
-							</div>						
+								<span id="wow_us_estimate"></span>
+							</div>
+							<br />	
+							
 							<label>
-								<input type="checkbox" name="game_item" value="wow_australia" onclick="show_estimate(this, 20,'game_results_wow_australia');"  /> 
+								<input type="checkbox" name="game_item" value="wow_australia" onclick="show_estimate(this, 20);"  /> 
 								Australia  
 							</label> 
 							<div class='inline'>
-								<span id='game_results_wow_australia'> </span>  
-								<span id='game_results_wow_australia_more_info_detailed'>  </span> 
-								<span id="wow_australia_history" class="history_span"  ></span>
-								<div> </div>
+								<span id="wow_australia_estimate"></span>
 							</div>
+							<br />
 							<label>
-								<input type="checkbox" name="game_item" value="wow_europe" onclick="show_estimate(this, 20,'game_results_wow_europe');"  /> 
+								<input type="checkbox" name="game_item" value="wow_europe" onclick="show_estimate(this, 20);"  /> 
 								Europe 
 							</label>  
 							<div class='inline'>
-								<span id='game_results_wow_europe'> </span>  
-								<span id='game_results_wow_europe_more_info_detailed'> </span> 
-								<span id="wow_europe_history" class="history_span"  > </span>
-								<div> </div>
-							</div>						
+								<span id="wow_europe_estimate"></span>
+							</div>
+							<br />					
 							<label>
-								<input type="checkbox" name="game_item" value="wow_china" onclick="show_estimate(this, 20,'game_results_wow_china');"  /> 
+								<input type="checkbox" name="game_item" value="wow_china" onclick="show_estimate(this, 20);"  /> 
 								China 
 							</label>  
 							<div class='inline'>
-								<span id='game_results_wow_china'> </span>  
-								<span id='game_results_wow_china_more_info_detailed'> </span> 
-								<span id="wow_china_history" class="history_span"  > </span>
-								<div> </div>
-							</div>						
+								<span id="wow_china_estimate"></span>
+							</div>
+							<br />					
 							<label>
-								<input type="checkbox" name="game_item" value="wow_taiwan" onclick="show_estimate(this, 20,'game_results_wow_taiwan');"  /> 
+								<input type="checkbox" name="game_item" value="wow_taiwan" onclick="show_estimate(this, 20);"  /> 
 								Taiwan 
 							</label>  
 							<div class='inline'>
-								<span id='game_results_wow_taiwan'> </span>  
-								<span id='game_results_wow_taiwan_more_info_detailed'>  </span> 
-								<span id="wow_taiwan_history" class="history_span"  ></span>
-								<div> </div>
-							</div>						
+								<span id="wow_taiwan_estimate"></span>
+							</div>
+							<br />					
 							<label>
-								<input type="checkbox" name="game_item" value="wow_korea" onclick="show_estimate(this, 20,'game_results_wow_korea');"  /> 
+								<input type="checkbox" name="game_item" value="wow_korea" onclick="show_estimate(this, 20);"  /> 
 								Korea  
 							</label> 
 							<div class='inline'>
-								<span id='game_results_wow_korea'> </span>  
-								<span id='game_results_wow_korea_more_info_detailed'> </span> 
-								<span id="wow_korea_history" class="history_span"  > </span>
-								<div> </div>
+								<span id="wow_korea_estimate"></span>
 							</div>
+							<br />
 						</div>
 						
 						<br />  <label> <input type="checkbox" name="game_1" value="lol" onclick="toggle_div(this, 'game_1_locations');" /> 
@@ -656,70 +664,59 @@ function select_all_items(item_prefix){
 								US  
 							</label> 
 							<div class='inline'>
-								<span id='game_results_lol_us'> </span> 
-								<span id='game_results_lol_us_more_info_detailed'>  </span> 
-								<span id="lol_us_history" class="history_span"  ></span>
-								<div> </div>
-							</div>	
+								<span id="lol_us_estimate"></span>
+							</div>
+							<br />
 							<label>
 								<input type="checkbox" name="game_item" value="lol_europe" onclick="show_estimate(this, 20,'game_results_lol_europe');"  /> 
 								Europe 
 							</label>  
 							<div class='inline'>
-								<span id='game_results_lol_europe'> </span>  
-								<span id='game_results_lol_europe_more_info_detailed'> </span> 
-								<span id="lol_europe_history" class="history_span"  > </span>
-								<div> </div>
+								<span id="lol_europe_estimate"></span>
 							</div>
+							<br />
 							<label>
 								<input type="checkbox" name="game_item" value="lol_asia" onclick="show_estimate(this, 20,'game_results_lol_asia');"  /> 
 								Asia  
 							</label> 
 							<div class='inline'>
-								<span id='game_results_lol_asia'> </span>  
-								<span id='game_results_lol_asia_more_info_detailed'> </span> 
-								<span id="lol_asia_history" class="history_span"  > </span>
-								<div> </div>
+								<span id="lol_asia_estimate"></span>
 							</div>
+							<br />
 						</div>
 						
 						<br /> 
 						<label>
-							<input type="checkbox" name="game_item" value="cod2"  onclick="show_estimate(this, 60,'game_results_cod2');" /> 
+							<input type="checkbox" name="game_item" value="cod2"  onclick="show_estimate(this, 60);" /> 
 							Call of Duty 2  
 						</label> 
 						<div class='inline'>
-							<span id='game_results_cod2'> </span> 
-							<span id='game_results_cod2_more_info_detailed'> </span>  
-							<span id="cod2_history" class="history_span"  > </span>
-							<div> </div>
-						</div>
+								<span id="cod2_estimate"></span>
+							</div>
+							<br />
 						
 						<label>
-							<input type="checkbox" name="game_item" value="cod4" onclick="show_estimate(this, 60 ,'game_results_cod4');" /> 
+							<input type="checkbox" name="game_item" value="cod4" onclick="show_estimate(this, 60);" /> 
 							Call of Duty 4  
 						</label> 
 						<div class='inline'>
-							<span id='game_results_cod4'> </span> 
-							<span id='game_results_cod4_more_info_detailed'> </span>  
-							<span id="cod4_history" class="history_span"  > </span>
-							<div> </div>
+								<span id="cod4_estimate"></span>
 						</div>
+						<br />
+							
 						<label>
-							<input type="checkbox" name="game_item" value="tf2" onclick="show_estimate(this, 60,'game_results_tf2');" /> 
+							<input type="checkbox" name="game_item" value="tf2" onclick="show_estimate(this, 60);" /> 
 							Team Fortress 2  
 						</label> 
 						<div class='inline'>
-							<span id='game_results_tf2'> </span> 
-							<span id='game_results_tf2_more_info_detailed'> </span> 
-							<span id="tf2_history" class="history_span"  > </span>
-							<div> </div>
+								<span id="tf2_estimate"></span>
 						</div>
+						<br />
 					</div>
 					
 					<br />
 					<div id='video_conference'>
-						<input type="checkbox" name="camera_title" value="camera" onClick="select_all_items('camera');toggle_div(this, 'camera_sites_list');" />
+						<input type="checkbox" name="camera_title" value="camera" onClick="select_all_items(this);toggle_div(this, 'camera_sites_list');" />
 						<b>Video Conference</b>
 						<br />
 						<div id="camera_sites_list" style="display:none; visibility: hidden;">
@@ -766,7 +763,7 @@ function select_all_items(item_prefix){
 					</div>
 					<br />
 					<div id='voice_conference'>
-						<input type="checkbox" name="voip_title" value="voip" onClick="select_all_items('voip');toggle_div(this, 'voip_sites_list');" />
+						<input type="checkbox" name="voip_title" value="voip" onClick="select_all_items(this);toggle_div(this, 'voip_sites_list');" />
 						<b>Voice Conference</b>
 						<br />
 						<div id="voip_sites_list" style="display:none; visibility: hidden;">
@@ -1448,7 +1445,7 @@ function select_all_items(item_prefix){
 						<table width='75%'>
 						<tr>
 						<td>
-						<label>Wow - US</label>
+						<label>WoW - US</label>
 						</td>
 						<td align='right'>
 						<div class='inline'>
@@ -1466,7 +1463,7 @@ function select_all_items(item_prefix){
 						<table width='75%'>
 						<tr>
 						<td>
-						<label>Wow - Australia</label>
+						<label>WoW - Australia</label>
 						</td>
 						<td align='right'>
 						<div class='inline'>
@@ -1547,6 +1544,114 @@ function select_all_items(item_prefix){
 								<span id="wow_korea_history" class="history_span"  ></span>
 								<div> </div>
 							</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='lol_us_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>LoL - US</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id='game_results_lol_us'> </span> 
+							<span id='game_results_lol_us_more_info_detailed'>  </span> 
+							<span id="lol_us_history" class="history_span"  ></span>
+							<div> </div>
+						</div>	
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='lol_europe_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>LoL - Europe</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id='game_results_lol_europe'> </span> 
+							<span id='game_results_lol_europe_more_info_detailed'>  </span> 
+							<span id="lol_europe_history" class="history_span"  ></span>
+							<div> </div>
+						</div>	
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='lol_asia_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>LoL - Asia</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id='game_results_lol_asia'> </span> 
+							<span id='game_results_lol_asia_more_info_detailed'>  </span> 
+							<span id="lol_asia_history" class="history_span"  ></span>
+							<div> </div>
+						</div>	
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='cod2_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>Call of Duty 2</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id='game_results_cod2'> </span> 
+							<span id='game_results_cod2_more_info_detailed'> </span>  
+							<span id="cod2_history" class="history_span"  > </span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='cod4_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>Call of Duty 4</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id='game_results_cod4'> </span> 
+							<span id='game_results_cod4_more_info_detailed'> </span>  
+							<span id="cod4_history" class="history_span"  > </span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='tf2_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>Team Fortress 2</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id='game_results_tf2'> </span> 
+							<span id='game_results_tf2_more_info_detailed'> </span>  
+							<span id="tf2_history" class="history_span"  > </span>
+							<div> </div>
+						</div>
 						</td>
 						</tr>
 						</table>
