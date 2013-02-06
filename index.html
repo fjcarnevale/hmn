@@ -723,40 +723,31 @@ function select_all_items(e){
 						
 									<div id="voip_locations"> 
 										<label> 
-											<input type="checkbox" name="camera_item" value="0" onclick="show_estimate(this, 15,'camera_results_0');" id='voip_us_checkbox' /> 
+											<input type="checkbox" name="camera_item" value="0" onclick="show_estimate(this, 15,'camera_0_estimate');" id='voip_us_checkbox' /> 
 											US East Coast 
 										</label>
 										<div class='inline'>
-											<span id='camera_results_0'> </span> 
-											<div id='camera_ind_0' style='display:none;visibility:hidden'><img src='indicator_medium.gif' /></div>
-											<span id="camera_0_more_info_detailed" ></span> 
-											<span id="camera_0_history" class="history_span"  ></span>
-											<div> </div>
+											<span id="camera_0_estimate"></span>
 										</div>
+										<br />	
 											
 										<label> 
-											<input type="checkbox" name="camera_item" value="1" onclick="show_estimate(this, 15,'camera_results_1');" /> 
+											<input type="checkbox" name="camera_item" value="1" onclick="show_estimate(this, 15,'camera_1_estimate');" /> 
 											US West Coast 
 										</label>
 										<div class='inline'>
-											<span id='camera_results_1'></span> 
-											<div id='camera_ind_1' style='display:none;visibility:hidden'><img src='indicator_medium.gif' /></div>
-											<span id="camera_1_more_info_detailed" ></span>
-											<span id="camera_1_history" class="history_span"  ></span>
-											<div> </div>
+											<span id="camera_1_estimate"></span>
 										</div>
+										<br />	
 											
 										<label> 
-											<input type="checkbox" name="camera_item" value="2" onclick="show_estimate(this, 15,'camera_results_2');" /> 
+											<input type="checkbox" name="camera_item" value="2" onclick="show_estimate(this, 15,'camera_2_estimate');" /> 
 											Europe 
 										</label>
 										<div class='inline'>
-											<span id='camera_results_2'> </span> 
-											<div id='camera_ind_2' style='display:none;visibility:hidden'> <img src='indicator_medium.gif' /></div> 
-											<span id="camera_2_more_info_detailed" ></span>
-											<span id="camera_2_history" class="history_span"  ></span>
-											<div> </div>
+											<span id="camera_2_estimate"></span>
 										</div>
+										<br />	
 											
 								</div>
 							</div>
@@ -770,37 +761,31 @@ function select_all_items(e){
 							<div id="voip_locations"> 
 								
 								<label> 
-									<input type="checkbox" name="voip_item" value="0" onclick="show_estimate(this, 60,'voip_results_0');" id='voip_us_checkbox' /> 
+									<input type="checkbox" name="voip_item" value="0" onclick="show_estimate(this, 60,'voip_0_estimate');" id='voip_us_checkbox' /> 
 									US East Coast 
 								</label> 
 								<div class='inline'>
-									<span id='voip_results_0'> </span> 
-									<span id="voip_0_more_info_detailed" ></span> 
-									<span id="voip_0_history" class="history_span"  ></span>								
-									<div> </div>
+									<span id="voip_0_estimate"></span>
 								</div>
+								<br />	
 									
 								<label> 
-									<input type="checkbox" name="voip_item" value="1" onclick="show_estimate(this, 60, 'voip_results_1');" /> 
+									<input type="checkbox" name="voip_item" value="1" onclick="show_estimate(this, 60, 'voip_1_estimate');" /> 
 									US West Coast 
 								</label> 
 								<div class='inline'>
-									<span id='voip_results_1'> </span> 
-									<span id="voip_1_more_info_detailed"></span>
-									<span id="voip_1_history" class="history_span"  ></span>								
-									<div> </div>
+									<span id="voip_1_estimate"></span>
 								</div>
+								<br />
 								
 								<label> 
-									<input type="checkbox" name="voip_item" value="2" onclick="show_estimate(this, 60,'voip_results_2');" /> 
+									<input type="checkbox" name="voip_item" value="2" onclick="show_estimate(this, 60,'voip_2_estimate');" /> 
 									Europe 
 								</label> 
 								<div class='inline'>
-									<span id='voip_results_2'> </span> 
-									<span id="voip_2_more_info_detailed"></span> 
-									<span id="voip_2_history" class="history_span"  ></span>
-									<div> </div>
-								</div>	
+									<span id="voip_2_estimate"></span>
+								</div>
+								<br />
 							</div>		
 						</div>
 					</div>
@@ -1650,6 +1635,119 @@ function select_all_items(e){
 							<span id='game_results_tf2'> </span> 
 							<span id='game_results_tf2_more_info_detailed'> </span>  
 							<span id="tf2_history" class="history_span"  > </span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<h4>Video Conference</h4>
+					<div id='camera_results_0_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>US East Coast</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id='camera_results_0'> </span> 
+							<div id='camera_ind_0' style='display:none;visibility:hidden'><img src='indicator_medium.gif' /></div>
+							<span id="camera_0_more_info_detailed" ></span> 
+							<span id="camera_0_history" class="history_span"  ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='camera_results_1_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>US West Coast</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id='camera_results_1'> </span> 
+							<div id='camera_ind_1' style='display:none;visibility:hidden'><img src='indicator_medium.gif' /></div>
+							<span id="camera_1_more_info_detailed" ></span> 
+							<span id="camera_1_history" class="history_span"  ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='camera_results_2_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>Europe</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id='camera_results_2'> </span> 
+							<div id='camera_ind_2' style='display:none;visibility:hidden'><img src='indicator_medium.gif' /></div>
+							<span id="camera_2_more_info_detailed" ></span> 
+							<span id="camera_2_history" class="history_span"  ></span>
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<h4>Voice Conference</h4>
+					<div id='voip_results_0_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>US East Coast</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id='voip_results_0'> </span> 
+							<span id="voip_0_more_info_detailed" ></span> 
+							<span id="voip_0_history" class="history_span"  ></span>								
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='voip_results_1_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>US East Coast</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id='voip_results_1'> </span> 
+							<span id="voip_1_more_info_detailed" ></span> 
+							<span id="voip_1_history" class="history_span"  ></span>								
+							<div> </div>
+						</div>
+						</td>
+						</tr>
+						</table>
+					</div>
+					
+					<div id='voip_results_1_results_div' name="results_div" style="display:none; visibility: hidden;">
+						<table width='75%'>
+						<tr>
+						<td>
+						<label>US East Coast</label>
+						</td>
+						<td align='right'>
+						<div class='inline'>
+							<span id='voip_results_1'> </span> 
+							<span id="voip_1_more_info_detailed" ></span> 
+							<span id="voip_1_history" class="history_span"  ></span>								
 							<div> </div>
 						</div>
 						</td>
