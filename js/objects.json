@@ -105,19 +105,19 @@
     },
 	"ru_container": {
         "link": "http://static.reuters.com/resources/media/global/assets/images/20110530/fullfocusmay301023.jpg",
-        "size": "14"
+        "size": "16"
     },
 	"ru_avg_object": {
         "link": "http://www.reuters.com/resources_v2/images/sprite-core.gif",
-        "size": "125"
+        "size": "162"
     },
 	"bbc_container": {
         "link": "http://news.bbcimg.co.uk/view/1_4_14/cream/hi/shared/img/services-rss.gif",
-        "size": "14"
+        "size": "11"
     },
 	"bbc_avg_object": {
         "link": "http://news.bbcimg.co.uk/view/1_4_19/cream/hi/news/img/livestats-sprite-ko.png",
-        "size": "125"
+        "size": "100"
     },
 	"ut_container": {
         "link": "http://i.usatoday.net/communitymanager/_photos/technology-live/2011/05/31/NBA%20Game%20Timex-inset-community.jpg",
@@ -125,7 +125,7 @@
     },
 	"ut_avg_object": {
         "link": "http://i.usatoday.net//news/gallery/2011/n110530_day/05-30-day/thumbnail-n110530-hf.jpg",
-        "size": "125"
+        "size": "134"
     },
 	"hp_container": {
         "link": "http://i.huffpost.com/gen/283213/thumbs/s-GRILL-FOODS-large.jpg",

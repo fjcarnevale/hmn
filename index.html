@@ -115,6 +115,18 @@ function select_all_items(e){
 	}
 }
 
+function run_main_tests(){
+	if(document.getElementById('network_performance_checkbox').checked){
+		TrunTest();
+	}
+
+	build_results_page();
+	change_tab('Results'); 
+	scroll(0, 0);
+	get_all_information(false);
+	
+	
+}
 
 </script>
 
@@ -575,7 +587,7 @@ function select_all_items(e){
 					</div>
 					<br />
 					<div id="network_performance"> 
-						<input type="checkbox" name="network_performance" id="network_performance" value="network"/>
+						<input type="checkbox" name="network_performance" id="network_performance_checkbox" value="network"/>
 						<b>Network Performance</b>
 						<br />
 						(Throughput/Round Trip/Jitter)
@@ -850,7 +862,7 @@ function select_all_items(e){
 							<table align='center' style='text-align:center;'>
 							<tr>
 								<td>
-									<input type="button" style='font-weight: bold;' id="measurements_button" value="Perform All Measurements" onclick="build_results_page(); change_tab('Results'); scroll(0, 0); get_all_information(false);" />
+									<input type="button" style='font-weight: bold;' id="measurements_button" value="Perform All Measurements" onclick="run_main_tests();" />
 								</td>
 								<td>
 									<input type="button" value="See Results for All Users with Same Connection Settings" onclick="get_user_stats('similar');" />
@@ -1969,6 +1981,7 @@ function select_all_items(e){
 		<span id='all_stat_loading_indicator' style="display:none;"> <img src='indicator_medium.gif' />  </span> <br />	<br />
 		
 	</div>
+
 </div>
 
 <div class='footer'></div>
