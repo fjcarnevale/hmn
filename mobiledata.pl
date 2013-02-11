@@ -16,6 +16,8 @@ $dbh = DBI->connect('dbi:mysql:db_url',$username,$password) or die "Connection e
 my $sql = "INSERT INTO table_name VALUES";
 
 #Parse first values here
+#retrieve like 'my $var = $cgi->param('test');'
+
 $sql .= "($val1,$val2)";
 for(int i=0;i<10;i++){
 	$sql .= ",($val1,$val2)"
